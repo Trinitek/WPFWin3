@@ -11,7 +11,7 @@ using System.Windows;
 using System.Windows.Data;
 using System.Windows.Markup;
 
-namespace IKriv.Wpf
+namespace Windows3Style.Converters
 {
     /// <summary>
     /// Value converter that performs arithmetic calculations over its argument(s)

@@ -24,6 +24,14 @@
                   Figures="M 0 0 L 6 6 L 0 12 Z"/>
     <PathGeometry x:Key="LeftArrowData"
                   Figures="M 6 0 L 6 12 L 0 6 Z"/>
+    <GeometryGroup x:Key="UpDownArrowData">
+        <PathGeometry Figures="{Binding Source={StaticResource UpArrowData}, Path=Figures}"/>
+        <PathGeometry Figures="{Binding Source={StaticResource DownArrowData}, Path=Figures}">
+            <PathGeometry.Transform>
+                <TranslateTransform Y="8"/>
+            </PathGeometry.Transform>
+        </PathGeometry>
+    </GeometryGroup>
 
     <SolidColorBrush x:Key="ControlLight" Color="White"/>
     <SolidColorBrush x:Key="Control" Color="LightGray"/>
@@ -44,7 +52,6 @@
 
     <SolidColorBrush x:Key="ProgressBarBackground" Color="White"/>
     <SolidColorBrush x:Key="ProgressBarIndicatorFill" Color="Blue"/>
-    <SolidColorBrush x:Key="ProgressBarIndicatorAnimatedFill" Color="Blue"/>
 
     <SolidColorBrush x:Key="TabControlTabBackground" Color="LightGray"/>
 </ResourceDictionary>

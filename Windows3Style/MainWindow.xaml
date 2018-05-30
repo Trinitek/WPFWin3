@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Windows3Style"
+        xmlns:converters="clr-namespace:Windows3Style.Converters"
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="400"
         FontFamily="{DynamicResource DefaultFont}"
@@ -195,9 +196,15 @@
                                   Header="Experimenter">
                             <StackPanel>
 
-                                <ProgressBar Value="{Binding ElementName=ProgressBar_Value, Path=Text}"/>
+                                <ProgressBar Value="{Binding ElementName=ProgressBar_Value, Path=Text}"
+                                             IsIndeterminate="{Binding ElementName=ProgressBar_Indeterminate, Path=IsChecked}"/>
                                 
-                                <Grid>
+                                <CheckBox x:Name="ProgressBar_Indeterminate"
+                                          Margin="0,2">
+                                    Indeterminate
+                                </CheckBox>
+                                
+                                <Grid IsEnabled="{Binding ElementName=ProgressBar_Indeterminate, Path=IsChecked, Converter={converters:InverseBooleanConverter}}">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="auto" SharedSizeGroup="ProgressBar_Label"/>
                                         <ColumnDefinition Width="*"/>
@@ -212,7 +219,7 @@
                                              HorizontalAlignment="Left"
                                              Text="{Binding ElementName=ProgressBar_Slider, Path=Value}"/>
                                 </Grid>
-                                <Grid>
+                                <Grid IsEnabled="{Binding ElementName=ProgressBar_Indeterminate, Path=IsChecked, Converter={converters:InverseBooleanConverter}}">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="auto" SharedSizeGroup="ProgressBar_Label"/>
                                         <ColumnDefinition Width="*"/>
@@ -249,6 +256,8 @@
                                   Data="{DynamicResource RightArrowData}"/>
                             <Path Fill="{DynamicResource Foreground}"
                                   Data="{DynamicResource LeftArrowData}"/>
+                            <Path Fill="{DynamicResource Foreground}"
+                                  Data="{DynamicResource UpDownArrowData}"/>
                         </StackPanel>
                     </StackPanel>
                 </TabItem>

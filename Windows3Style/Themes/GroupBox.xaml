@@ -1,7 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:Windows3Style.Themes"
-                    xmlns:wpf="clr-namespace:IKriv.Wpf">
+                    xmlns:wpf="clr-namespace:IKriv.Wpf"
+                    xmlns:converters="clr-namespace:Windows3Style.Converters">
     <Style TargetType="{x:Type GroupBox}"
            x:Key="GroupBoxBase">
         <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -32,7 +33,7 @@
                                         <TranslateTransform Y="{
                                             Binding RelativeSource={RelativeSource AncestorType={x:Type Grid}, Mode=FindAncestor}, 
                                             Path=ActualHeight,
-                                            Converter={wpf:MathConverter}, ConverterParameter=x/2}"/>
+                                            Converter={converters:MathConverter}, ConverterParameter=x/2}"/>
                                     </Border.RenderTransform>
                                 </Border>
                             </Grid>
@@ -45,7 +46,7 @@
                                         <TranslateTransform Y="{
                                             Binding RelativeSource={RelativeSource AncestorType={x:Type Grid}, Mode=FindAncestor},
                                             Path=ActualHeight,
-                                            Converter={wpf:MathConverter}, ConverterParameter=x/2}"/>
+                                            Converter={converters:MathConverter}, ConverterParameter=x/2}"/>
                                     </Border.RenderTransform>
                                 </Border>
                             </Grid>
