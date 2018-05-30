@@ -141,6 +141,39 @@
 
                     </StackPanel>
                 </TabItem>
+                <TabItem Header="GroupBox">
+                    <StackPanel>
+                        <GroupBox Header="Empty GroupBox">
+                        </GroupBox>
+                        <GroupBox>
+                            <GroupBox.Header>
+                                <TextBlock>
+                                    GroupBox with
+                                    <LineBreak/>
+                                    multiple
+                                    <LineBreak/>
+                                    lines in its header
+                                </TextBlock>
+                            </GroupBox.Header>
+                        </GroupBox>
+                        <GroupBox Header="GroupBox with some things in it">
+                            <UniformGrid Columns="3" Rows="2">
+                                <UniformGrid.Resources>
+                                    <Style TargetType="{x:Type Button}"
+                                           BasedOn="{StaticResource ButtonBase}">
+                                        <Setter Property="Margin" Value="4"/>
+                                    </Style>
+                                </UniformGrid.Resources>
+                                <Button>Hamburger</Button>
+                                <Button>Hotdog</Button>
+                                <Button>French Fries</Button>
+                                <Button>Chips</Button>
+                                <Button>Barbecue</Button>
+                                <Button>Chicken Wings</Button>
+                            </UniformGrid>
+                        </GroupBox>
+                    </StackPanel>
+                </TabItem>
                 <TabItem Header="ProgressBar">
                     <StackPanel>
                         <StackPanel.Resources>
@@ -157,11 +190,11 @@
                         <ProgressBar Value="100"/>
                         <ProgressBar IsIndeterminate="True"/>
 
-                        <GroupBox Header="Experimenter"
-                                  Margin="4"
-                                  Padding="4">
+                        <GroupBox Margin="4"
+                                  Padding="4"
+                                  Header="Experimenter">
                             <StackPanel>
-                                
+
                                 <ProgressBar Value="{Binding ElementName=ProgressBar_Value, Path=Text}"/>
                                 
                                 <Grid>
