@@ -1,0 +1,225 @@
+﻿<Window x:Class="Windows3Style.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Windows3Style"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="400"
+        FontFamily="{DynamicResource DefaultFont}"
+        FontSize="{DynamicResource DefaultFontSize}"
+        FontWeight="Bold"
+        RenderOptions.EdgeMode="Aliased"
+        TextOptions.TextRenderingMode="Aliased"
+        TextOptions.TextFormattingMode="Display"
+        SnapsToDevicePixels="True"
+        UseLayoutRounding="True"
+        Background="White">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top"
+                  IsMainMenu="True">
+                <MenuItem Header="File">
+                    <MenuItem Header="Submenu">
+                        <MenuItem Header="Sub item 1"/>
+                        <MenuItem Header="Sub item 2"/>
+                    </MenuItem>
+                    <MenuItem Header="Disabled"
+                              IsEnabled="False"/>
+                    <Separator/>
+                    <MenuItem Header="Exit"
+                              InputGestureText="Alt+F4"/>
+                </MenuItem>
+                <MenuItem Header="Spam">
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item"/>
+                </MenuItem>
+                <MenuItem Header="About"/>
+            </Menu>
+
+            <TabControl Margin="4">
+                <TabItem Header="Button">
+                    <StackPanel>
+                        <StackPanel.Resources>
+                            <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ButtonBase}">
+                                <Setter Property="Margin" Value="0,2"/>
+                            </Style>
+                        </StackPanel.Resources>
+
+                        <Button Height="30" Width="100"
+                                IsEnabled="{Binding ElementName=EnabledCheck, Path=IsChecked}"
+                                IsDefault="{Binding ElementName=DefaultCheck, Path=IsChecked}">
+                            _Hello world!
+                        </Button>
+                        <CheckBox x:Name="EnabledCheck"
+                                  IsChecked="True">
+                            Is Enabled
+                        </CheckBox>
+                        <CheckBox x:Name="DefaultCheck"
+                                  HorizontalAlignment="Center">
+                            Is Default
+                        </CheckBox>
+
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="CheckBox">
+                    <StackPanel>
+                        <StackPanel.Resources>
+                            <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource CheckBoxBase}">
+                                <Setter Property="Margin" Value="0,2"/>
+                            </Style>
+                        </StackPanel.Resources>
+
+                        <CheckBox>
+                            Unchecked
+                        </CheckBox>
+                        <CheckBox IsChecked="True">
+                            Checked
+                        </CheckBox>
+                        <CheckBox IsEnabled="False">
+                            Disabled
+                        </CheckBox>
+                        <CheckBox IsEnabled="False"
+                                  IsChecked="True">
+                            Disabled and checked
+                        </CheckBox>
+                        <CheckBox IsChecked="{x:Null}"
+                                  IsThreeState="True">
+                            Indeterminate
+                        </CheckBox>
+                        <CheckBox IsChecked="{x:Null}"
+                                  IsThreeState="True"
+                                  IsEnabled="False">
+                            Indeterminate and disabled
+                        </CheckBox>
+
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="ProgressBar">
+                    <StackPanel>
+                        <StackPanel.Resources>
+                            <Style TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarBase}">
+                                <Setter Property="Margin" Value="0,2"/>
+                                <Setter Property="Height" Value="20"/>
+                            </Style>
+                        </StackPanel.Resources>
+
+                        <ProgressBar/>
+                        <ProgressBar Value="25"/>
+                        <ProgressBar Value="50"/>
+                        <ProgressBar Value="75"/>
+                        <ProgressBar Value="100"/>
+                        <ProgressBar IsIndeterminate="True"/>
+
+                        <GroupBox Header="Experimenter"
+                                  Margin="4"
+                                  Padding="4">
+                            <StackPanel>
+                                
+                                <ProgressBar Value="{Binding ElementName=ProgressBar_Value, Path=Text}"/>
+                                
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto" SharedSizeGroup="ProgressBar_Label"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <Label Grid.Column="0">
+                                        Value
+                                    </Label>
+                                    <TextBox x:Name="ProgressBar_Value"
+                                             Grid.Column="1"
+                                             Width="40"
+                                             HorizontalAlignment="Left"
+                                             Text="{Binding ElementName=ProgressBar_Slider, Path=Value}"/>
+                                </Grid>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto" SharedSizeGroup="ProgressBar_Label"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0">
+                                        Slider
+                                    </Label>
+                                    <Slider Grid.Column="1"
+                                            x:Name="ProgressBar_Slider"
+                                            Minimum="0"
+                                            Maximum="100"/>
+                                </Grid>
+                            </StackPanel>
+                            
+                        </GroupBox>
+                        
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="RadioButton">
+
+                </TabItem>
+                <TabItem Header="ScrollBar">
+                    
+                </TabItem>
+                <TabItem Header="Icons">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Path Fill="{DynamicResource Foreground}"
+                                  Data="{DynamicResource UpArrowData}"/>
+                            <Path Fill="{DynamicResource Foreground}"
+                                  Data="{DynamicResource DownArrowData}"/>
+                            <Path Fill="{DynamicResource Foreground}"
+                                  Data="{DynamicResource RightArrowData}"/>
+                            <Path Fill="{DynamicResource Foreground}"
+                                  Data="{DynamicResource LeftArrowData}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </TabItem>
+            </TabControl>
+        </DockPanel>
+    </Grid>
+</Window>

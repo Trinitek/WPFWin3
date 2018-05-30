@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Windows3Style.Themes">
+    <Style TargetType="{x:Type GroupBox}"
+           x:Key="GroupBoxBase">
+        
+    </Style>
+
+    <Style TargetType="{x:Type GroupBox}"
+           BasedOn="{StaticResource GroupBoxBase}"/>
+</ResourceDictionary>
