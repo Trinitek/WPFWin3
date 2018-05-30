@@ -10,6 +10,7 @@
         <ResourceDictionary Source="GroupBox.xaml"/>
         <ResourceDictionary Source="Menu.xaml"/>
         <ResourceDictionary Source="ProgressBar.xaml"/>
+        <ResourceDictionary Source="Slider.xaml"/>
         <ResourceDictionary Source="TabControl.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 

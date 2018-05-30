@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Windows3Style"
         xmlns:converters="clr-namespace:Windows3Style.Converters"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="400"
+        Title="MainWindow" Height="600" Width="500"
         FontFamily="{DynamicResource DefaultFont}"
         FontSize="{DynamicResource DefaultFontSize}"
         FontWeight="Bold"
@@ -176,7 +176,7 @@
                     </StackPanel>
                 </TabItem>
                 <TabItem Header="ProgressBar">
-                    <StackPanel>
+                    <StackPanel Grid.IsSharedSizeScope="True">
                         <StackPanel.Resources>
                             <Style TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarBase}">
                                 <Setter Property="Margin" Value="0,2"/>
@@ -244,6 +244,120 @@
                 </TabItem>
                 <TabItem Header="ScrollBar">
                     
+                </TabItem>
+                <TabItem Header="Slider">
+                    <StackPanel Grid.IsSharedSizeScope="True" Background="Transparent">
+                        <StackPanel.Resources>
+                            <Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource GroupBoxBase}">
+                                <Setter Property="Margin" Value="2,0"/>
+                                <Setter Property="Padding" Value="4"/>
+                            </Style>
+                        </StackPanel.Resources>
+
+                        <StackPanel Orientation="Horizontal">
+                            <Thumb Style="{StaticResource SliderThumb}"/>
+                            <Thumb Style="{StaticResource SliderThumbDown}"/>
+                            <Thumb Style="{StaticResource SliderThumbUp}"/>
+                            <Thumb Style="{StaticResource SliderThumbRight}"/>
+                            <Thumb Style="{StaticResource SliderThumbLeft}"/>
+                        </StackPanel>
+
+                        <GroupBox Header="Default">
+                            <Slider/>
+                        </GroupBox>
+                        <GroupBox Header="Selection range">
+                            <Slider SelectionStart="25"
+                                    SelectionEnd="75"
+                                    Minimum="0"
+                                    Maximum="100"
+                                    IsSelectionRangeEnabled="True"
+                                    Value="45"/>
+                        </GroupBox>
+                        <GroupBox Header="Double ticks (green foreground)">
+                            <Slider SelectionStart="25"
+                                    SelectionEnd="75"
+                                    Minimum="0"
+                                    Maximum="100"
+                                    IsSelectionRangeEnabled="True"
+                                    TickPlacement="Both"
+                                    TickFrequency="5"
+                                    Value="60"
+                                    Foreground="Green"/>
+                        </GroupBox>
+                        <GroupBox Header="Top ticks">
+                            <Slider SelectionStart="25"
+                                    SelectionEnd="75"
+                                    Minimum="0"
+                                    Maximum="100"
+                                    IsSelectionRangeEnabled="True"
+                                    TickPlacement="TopLeft"
+                                    TickFrequency="5"
+                                    Value="75"/>
+                        </GroupBox>
+                        <GroupBox Header="Bottom ticks">
+                            <Slider SelectionStart="25"
+                                    SelectionEnd="75"
+                                    Minimum="0"
+                                    Maximum="100"
+                                    IsSelectionRangeEnabled="True"
+                                    TickPlacement="BottomRight"
+                                    TickFrequency="5"
+                                    Value="65"/>
+                        </GroupBox>
+                        <UniformGrid Columns="5"
+                                     Height="150">
+                            <UniformGrid.Resources>
+                                <Style TargetType="{x:Type Slider}" BasedOn="{StaticResource SliderBase}">
+                                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                                </Style>
+                            </UniformGrid.Resources>
+                            <GroupBox Header="Default">
+                                <Slider Orientation="Vertical"/>
+                            </GroupBox>
+                            <GroupBox Header="Selection range">
+                                <Slider SelectionStart="25"
+                                        SelectionEnd="75"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        IsSelectionRangeEnabled="True"
+                                        Value="45"
+                                        Orientation="Vertical"/>
+                            </GroupBox>
+                            <GroupBox Header="Double ticks">
+                                <Slider SelectionStart="25"
+                                        SelectionEnd="75"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        IsSelectionRangeEnabled="True"
+                                        TickPlacement="Both"
+                                        TickFrequency="5"
+                                        Value="60"
+                                        Orientation="Vertical"/>
+                            </GroupBox>
+                            <GroupBox Header="Right ticks">
+                                <Slider SelectionStart="25"
+                                        SelectionEnd="75"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        IsSelectionRangeEnabled="True"
+                                        TickPlacement="BottomRight"
+                                        TickFrequency="10"
+                                        Value="75"
+                                        Orientation="Vertical"/>
+                            </GroupBox>
+                            <GroupBox Header="Left ticks">
+                                <Slider SelectionStart="25"
+                                        SelectionEnd="75"
+                                        Minimum="0"
+                                        Maximum="100"
+                                        IsSelectionRangeEnabled="True"
+                                        TickPlacement="TopLeft"
+                                        TickFrequency="10"
+                                        Value="65"
+                                        Orientation="Vertical"/>
+                            </GroupBox>
+                        </UniformGrid>
+                    </StackPanel>
                 </TabItem>
                 <TabItem Header="Icons">
                     <StackPanel>
