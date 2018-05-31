@@ -15,6 +15,7 @@
         <ResourceDictionary Source="RadioButton.xaml" />
         <ResourceDictionary Source="Slider.xaml" />
         <ResourceDictionary Source="TabControl.xaml" />
+        <ResourceDictionary Source="TextBox.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <FontFamily x:Key="DefaultFont">Microsoft Sans Serif</FontFamily>
@@ -46,6 +47,7 @@
 
     <SolidColorBrush x:Key="CheckBoxBackground" Color="White" />
     <SolidColorBrush x:Key="RadioButtonBackground" Color="White" />
+    <SolidColorBrush x:Key="TextBoxBackground" Color="White" />
 
     <SolidColorBrush x:Key="MenuBackground" Color="White" />
     <FontFamily x:Key="MenuFont">Microsoft Sans Serif</FontFamily>

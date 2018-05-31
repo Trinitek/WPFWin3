@@ -517,13 +517,15 @@
                             </Style>
                         </StackPanel.Resources>
 
-                        <StackPanel Orientation="Horizontal">
-                            <Thumb Style="{StaticResource SliderThumb}" />
-                            <Thumb Style="{StaticResource SliderThumbDown}" />
-                            <Thumb Style="{StaticResource SliderThumbUp}" />
-                            <Thumb Style="{StaticResource SliderThumbRight}" />
-                            <Thumb Style="{StaticResource SliderThumbLeft}" />
-                        </StackPanel>
+                        <GroupBox Header="Thumbs">
+                            <StackPanel Orientation="Horizontal">
+                                <Thumb Style="{StaticResource SliderThumb}" />
+                                <Thumb Style="{StaticResource SliderThumbDown}" />
+                                <Thumb Style="{StaticResource SliderThumbUp}" />
+                                <Thumb Style="{StaticResource SliderThumbRight}" />
+                                <Thumb Style="{StaticResource SliderThumbLeft}" />
+                            </StackPanel>
+                        </GroupBox>
 
                         <GroupBox Header="Default">
                             <Slider />
@@ -627,6 +629,116 @@
                                     Value="65" />
                             </GroupBox>
                         </UniformGrid>
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="TextBox">
+                    <StackPanel Grid.IsSharedSizeScope="True">
+                        <StackPanel.Resources>
+                            <Style TargetType="{x:Type Grid}">
+                                <Setter Property="Margin" Value="2" />
+                            </Style>
+                        </StackPanel.Resources>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" SharedSizeGroup="TextBox_Label" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0">
+                                Default
+                            </Label>
+                            <TextBox Grid.Column="1" />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" SharedSizeGroup="TextBox_Label" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0">
+                                With text
+                            </Label>
+                            <TextBox Grid.Column="1">
+                                Hello!
+                            </TextBox>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" SharedSizeGroup="TextBox_Label" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0">
+                                Disabled
+                            </Label>
+                            <TextBox Grid.Column="1" IsEnabled="False" />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" SharedSizeGroup="TextBox_Label" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0">
+                                Disabled with text
+                            </Label>
+                            <TextBox Grid.Column="1" IsEnabled="False">
+                                Hello!
+                            </TextBox>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" SharedSizeGroup="TextBox_Label" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0">
+                                Readonly
+                            </Label>
+                            <TextBox Grid.Column="1" IsReadOnly="True" />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" SharedSizeGroup="TextBox_Label" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0">
+                                Readonly with text
+                            </Label>
+                            <TextBox Grid.Column="1" IsReadOnly="True">
+                                Hello!
+                            </TextBox>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" SharedSizeGroup="TextBox_Label" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0">
+                                Readonly disabled with text
+                            </Label>
+                            <TextBox
+                                Grid.Column="1"
+                                IsEnabled="False"
+                                IsReadOnly="True">
+                                Hello!
+                            </TextBox>
+                        </Grid>
+                        <TextBox Margin="2" />
+                        <TextBox Margin="2">
+                            This and the one above are TextBoxes with the default height.
+                        </TextBox>
+                        <TextBox Margin="2" Padding="4">
+                            This TextBox has a Padding of 4.
+                        </TextBox>
+                        <TextBox
+                            Height="40"
+                            Margin="2"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center">
+                            This is vertically and horizontally centered content.
+                        </TextBox>
+                        <TextBox
+                            Margin="2"
+                            Background="SlateGray"
+                            Foreground="LightBlue">
+                            This is a TextBox with a custom Foreground and Background.
+                        </TextBox>
                     </StackPanel>
                 </TabItem>
                 <TabItem Header="Icons">
