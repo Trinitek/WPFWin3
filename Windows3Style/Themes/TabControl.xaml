@@ -73,13 +73,15 @@
                                     x:Name="BottomBorder"
                                     BorderBrush="{DynamicResource ControlDark}"
                                     BorderThickness="0,0,2,0" />
-                                <ContentPresenter
-                                    x:Name="ContentSite"
-                                    Margin="12,2"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    ContentSource="Header"
-                                    RecognizesAccessKey="True" />
+                                <ContentControl Margin="12,3,12,0">
+                                    <ContentPresenter
+                                        x:Name="ContentSite"
+                                        Margin="{TemplateBinding Padding}"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        ContentSource="Header"
+                                        RecognizesAccessKey="True" />
+                                </ContentControl>
                                 <Grid
                                     x:Name="Overflow"
                                     Margin="0,0,0,-3"
@@ -104,6 +106,11 @@
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="Panel.ZIndex" Value="100" />
                             <Setter TargetName="Overflow" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="ContentSite" Property="RenderTransform">
+                                <Setter.Value>
+                                    <TranslateTransform Y="-1" />
+                                </Setter.Value>
+                            </Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
