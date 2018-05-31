@@ -21,26 +21,27 @@
                                     <Rectangle x:Name="GlowRect" Fill="{TemplateBinding Foreground}" />
                                     <Grid
                                         x:Name="Animation"
-                                        Background="{TemplateBinding Foreground}"
                                         ClipToBounds="True"
                                         Visibility="Hidden">
-                                        <Rectangle
-                                            x:Name="GlowRectPre"
-                                            Margin="-75,0,0,0"
-                                            Fill="{TemplateBinding Background}">
-                                            <Rectangle.RenderTransform>
-                                                <ScaleTransform x:Name="GlowRectPreTransform" ScaleX="0" />
-                                            </Rectangle.RenderTransform>
-                                        </Rectangle>
-                                        <Rectangle
-                                            x:Name="GlowRectPost"
-                                            Margin="0,0,-75,0"
-                                            Fill="{TemplateBinding Background}"
-                                            RenderTransformOrigin="1,0">
-                                            <Rectangle.RenderTransform>
-                                                <ScaleTransform x:Name="GlowRectPostTransform" ScaleX="1" />
-                                            </Rectangle.RenderTransform>
-                                        </Rectangle>
+                                        <!--
+                                            PART_GlowRect is automagically bound to an animation in the codebehind.
+                                            However, it also applies a gradient effect over the foreground of the
+                                            named control. To get the benefit of the animation and to override the
+                                            gradient nonsense, we add an additional Rectangle with the real color
+                                            as the only child.
+                                        -->
+                                        <ContentControl
+                                            x:Name="PART_GlowRect"
+                                            Width="100"
+                                            Margin="-100"
+                                            HorizontalAlignment="Left">
+                                            <Rectangle
+                                                x:Name="GlowRectOverlay"
+                                                Width="100"
+                                                Margin="0"
+                                                HorizontalAlignment="Left"
+                                                Fill="{TemplateBinding Foreground}" />
+                                        </ContentControl>
                                     </Grid>
                                 </Grid>
                             </Decorator>
@@ -49,26 +50,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsIndeterminate" Value="True">
                             <Setter TargetName="Animation" Property="Visibility" Value="Visible" />
-                            <Trigger.EnterActions>
-                                <BeginStoryboard>
-                                    <Storyboard RepeatBehavior="Forever">
-                                        <DoubleAnimation
-                                            AutoReverse="False"
-                                            Storyboard.TargetName="GlowRectPreTransform"
-                                            Storyboard.TargetProperty="(ScaleTransform.ScaleX)"
-                                            From="0"
-                                            To="1"
-                                            Duration="00:00:02" />
-                                        <DoubleAnimation
-                                            AutoReverse="False"
-                                            Storyboard.TargetName="GlowRectPostTransform"
-                                            Storyboard.TargetProperty="(ScaleTransform.ScaleX)"
-                                            From="1"
-                                            To="0"
-                                            Duration="00:00:02" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.EnterActions>
+                            <Setter TargetName="GlowRect" Property="Visibility" Value="Hidden" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
