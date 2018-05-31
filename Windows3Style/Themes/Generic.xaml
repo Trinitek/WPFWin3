@@ -9,6 +9,7 @@
         <ResourceDictionary Source="CheckBox.xaml"/>
         <ResourceDictionary Source="GroupBox.xaml"/>
         <ResourceDictionary Source="Menu.xaml"/>
+        <ResourceDictionary Source="Panel.xaml"/>
         <ResourceDictionary Source="ProgressBar.xaml"/>
         <ResourceDictionary Source="RadioButton.xaml"/>
         <ResourceDictionary Source="Slider.xaml"/>

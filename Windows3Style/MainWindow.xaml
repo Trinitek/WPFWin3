@@ -175,6 +175,80 @@
                         </GroupBox>
                     </StackPanel>
                 </TabItem>
+                <TabItem Header="Panel">
+                    <StackPanel>
+                        <TextBlock Margin="4"
+                                   TextWrapping="Wrap">
+                            <Run>
+                                The window designers in the RAD tools of yesteryear each included a Panel control which
+                                provided a way to visually group controls. Unlike the GroupBox, the humble Panel has no
+                                label. Panels could typically be styled to be flat, or with a 3D bezeled or raised look.
+                            </Run>
+                            <LineBreak/>
+                            <LineBreak/>
+                            <Run>
+                                The Panel styles provided in this theme actually target ContentControl, not Panel.
+                            </Run>
+                        </TextBlock>
+                        <UniformGrid Columns="2">
+                            <UniformGrid.Resources>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                    <Setter Property="Margin" Value="32"/>
+                                </Style>
+                            </UniformGrid.Resources>
+                            <ContentControl Style="{StaticResource PanelBezelRaised1}"
+                                            Margin="4">
+                                <TextBlock>
+                                    PanelBezelRaised1
+                                </TextBlock>
+                            </ContentControl>
+                            <ContentControl Style="{StaticResource PanelBezelRaised2}"
+                                            Margin="4">
+                                <TextBlock>
+                                    PanelBezelRaised2
+                                </TextBlock>
+                            </ContentControl>
+                            <ContentControl Style="{StaticResource PanelBezelSunken1}"
+                                            Margin="4">
+                                <TextBlock>
+                                    PanelBezelSunken1
+                                </TextBlock>
+                            </ContentControl>
+                            <ContentControl Style="{StaticResource PanelBezelSunken2}"
+                                            Margin="4">
+                                <TextBlock>
+                                    PanelBezelSunken2
+                                </TextBlock>
+                            </ContentControl>
+                            <ContentControl Style="{StaticResource Panel3DRaised1}"
+                                            Margin="4">
+                                <TextBlock>
+                                    Panel3DRaised1
+                                </TextBlock>
+                            </ContentControl>
+                            <ContentControl Style="{StaticResource Panel3DRaised2}"
+                                            Margin="4">
+                                <TextBlock>
+                                    Panel3DRaised2
+                                </TextBlock>
+                            </ContentControl>
+                            <ContentControl Style="{StaticResource Panel3DSunken1}"
+                                            Margin="4">
+                                <TextBlock>
+                                    Panel3DSunken1
+                                </TextBlock>
+                            </ContentControl>
+                            <ContentControl Style="{StaticResource Panel3DSunken2}"
+                                            Margin="4">
+                                <TextBlock>
+                                    Panel3DSunken2
+                                </TextBlock>
+                            </ContentControl>
+                        </UniformGrid>
+                    </StackPanel>
+                </TabItem>
                 <TabItem Header="ProgressBar">
                     <StackPanel Grid.IsSharedSizeScope="True">
                         <StackPanel.Resources>
