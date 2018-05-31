@@ -1,0 +1,323 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Windows3Style.Themes">
+    <Style TargetType="{x:Type RadioButton}"
+           x:Key="RadioButtonBase">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Foreground" Value="{DynamicResource Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource CheckBoxBackground}"/>
+        <Setter Property="Padding" Value="2,0,0,0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <StackPanel Orientation="Horizontal">
+                        <BulletDecorator>
+                            <BulletDecorator.Bullet>
+                                <Grid Width="12"
+                                      Height="12">
+                                    <Ellipse x:Name="Border"
+                                             StrokeThickness="1"
+                                             Stroke="{DynamicResource ControlOutline}"
+                                             Fill="{TemplateBinding Background}">
+                                    </Ellipse>
+                                    <Ellipse x:Name="CheckMark"
+                                             Margin="3"
+                                             Fill="{TemplateBinding Foreground}"
+                                             Visibility="Hidden"/>
+                                    <Line x:Name="Tristate"
+                                          StrokeThickness="2"
+                                          Stroke="{TemplateBinding Foreground}"
+                                          X1="2" Y1="2"
+                                          X2="10" Y2="10"
+                                          Visibility="Hidden"/>
+                                </Grid>
+                            </BulletDecorator.Bullet>
+                        </BulletDecorator>
+                        <ContentPresenter Margin="{TemplateBinding Padding}"/>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="CheckMark" Property="Fill" Value="{DynamicResource ForegroundDisabled}"/>
+                            <Setter Property="TextBlock.Foreground" Value="{DynamicResource ForegroundDisabled}"/>
+                            <Setter TargetName="Tristate" Property="Stroke" Value="{DynamicResource ForegroundDisabled}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="StrokeThickness" Value="2"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsThreeState" Value="True"/>
+                                <Condition Property="IsChecked" Value="{x:Null}"/>
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter TargetName="Tristate" Property="Visibility" Value="Visible"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type RadioButton}"
+           BasedOn="{StaticResource RadioButtonBase}"/>
+    
+    <!-- Horizontal pills -->
+
+    <Style TargetType="{x:Type RadioButton}"
+           x:Key="RadioButtonPillBase">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Background" Value="{DynamicResource Control}"/>
+        <Setter Property="Padding" Value="10,3"/>
+    </Style>
+    
+    <Style TargetType="{x:Type RadioButton}"
+           BasedOn="{StaticResource RadioButtonPillBase}"
+           x:Key="HorizontalRadioButtonPillLeft">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="Border"
+                            BorderThickness="1,1,0,1"
+                            CornerRadius="2,0,0,2"
+                            BorderBrush="{DynamicResource ControlOutline}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <Border x:Name="TopBorder"
+                                    BorderThickness="2,2,0,0"
+                                    BorderBrush="{DynamicResource ControlLight}"/>
+                            <Border x:Name="BottomBorder"
+                                    BorderThickness="0,0,2,2"
+                                    BorderBrush="{DynamicResource ControlDark}"
+                                    Margin="1,1,0,0"/>
+                            <ContentPresenter x:Name="Presenter"
+                                              Margin="{TemplateBinding Padding}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="TopBorder" Property="BorderBrush" Value="{DynamicResource ControlDark}"/>
+                            <Setter TargetName="BottomBorder" Property="BorderBrush" Value="{DynamicResource ControlLight}"/>
+                            <Setter TargetName="Presenter" Property="RenderTransform">
+                                <Setter.Value>
+                                    <TranslateTransform X="1" Y="1"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="TextBlock.Foreground" Value="{DynamicResource ForegroundDisabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type RadioButton}"
+           BasedOn="{StaticResource RadioButtonPillBase}"
+           x:Key="HorizontalRadioButtonPillCenter">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="Border"
+                            BorderThickness="0,1,0,1"
+                            CornerRadius="0"
+                            BorderBrush="{DynamicResource ControlOutline}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <Border x:Name="TopBorder"
+                                    BorderThickness="2,2,0,0"
+                                    BorderBrush="{DynamicResource ControlLight}"/>
+                            <Border x:Name="BottomBorder"
+                                    BorderThickness="0,0,2,2"
+                                    BorderBrush="{DynamicResource ControlDark}"
+                                    Margin="1,1,0,0"/>
+                            <ContentPresenter x:Name="Presenter"
+                                              Margin="{TemplateBinding Padding}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="TopBorder" Property="BorderBrush" Value="{DynamicResource ControlDark}"/>
+                            <Setter TargetName="BottomBorder" Property="BorderBrush" Value="{DynamicResource ControlLight}"/>
+                            <Setter TargetName="Presenter" Property="RenderTransform">
+                                <Setter.Value>
+                                    <TranslateTransform X="1" Y="1"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="TextBlock.Foreground" Value="{DynamicResource ForegroundDisabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type RadioButton}"
+           BasedOn="{StaticResource RadioButtonPillBase}"
+           x:Key="HorizontalRadioButtonPillRight">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="Border"
+                            BorderThickness="0,1,1,1"
+                            CornerRadius="0,2,2,0"
+                            BorderBrush="{DynamicResource ControlOutline}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <Border x:Name="TopBorder"
+                                    BorderThickness="2,2,0,0"
+                                    BorderBrush="{DynamicResource ControlLight}"/>
+                            <Border x:Name="BottomBorder"
+                                    BorderThickness="0,0,2,2"
+                                    BorderBrush="{DynamicResource ControlDark}"
+                                    Margin="1,1,0,0"/>
+                            <ContentPresenter x:Name="Presenter"
+                                              Margin="{TemplateBinding Padding}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="TopBorder" Property="BorderBrush" Value="{DynamicResource ControlDark}"/>
+                            <Setter TargetName="BottomBorder" Property="BorderBrush" Value="{DynamicResource ControlLight}"/>
+                            <Setter TargetName="Presenter" Property="RenderTransform">
+                                <Setter.Value>
+                                    <TranslateTransform X="1" Y="1"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="TextBlock.Foreground" Value="{DynamicResource ForegroundDisabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Vertical pills -->
+
+    <Style TargetType="{x:Type RadioButton}"
+           BasedOn="{StaticResource RadioButtonPillBase}"
+           x:Key="VerticalRadioButtonPillTop">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="Border"
+                            BorderThickness="1,1,1,0"
+                            CornerRadius="2,2,0,0"
+                            BorderBrush="{DynamicResource ControlOutline}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <Border x:Name="TopBorder"
+                                    BorderThickness="2,2,0,0"
+                                    BorderBrush="{DynamicResource ControlLight}"/>
+                            <Border x:Name="BottomBorder"
+                                    BorderThickness="0,0,2,2"
+                                    BorderBrush="{DynamicResource ControlDark}"
+                                    Margin="1,1,0,0"/>
+                            <ContentPresenter x:Name="Presenter"
+                                              Margin="{TemplateBinding Padding}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="TopBorder" Property="BorderBrush" Value="{DynamicResource ControlDark}"/>
+                            <Setter TargetName="BottomBorder" Property="BorderBrush" Value="{DynamicResource ControlLight}"/>
+                            <Setter TargetName="Presenter" Property="RenderTransform">
+                                <Setter.Value>
+                                    <TranslateTransform X="1" Y="1"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="TextBlock.Foreground" Value="{DynamicResource ForegroundDisabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type RadioButton}"
+           BasedOn="{StaticResource RadioButtonPillBase}"
+           x:Key="VerticalRadioButtonPillCenter">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="Border"
+                            BorderThickness="1,0,1,0"
+                            CornerRadius="0"
+                            BorderBrush="{DynamicResource ControlOutline}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <Border x:Name="TopBorder"
+                                    BorderThickness="2,2,0,0"
+                                    BorderBrush="{DynamicResource ControlLight}"/>
+                            <Border x:Name="BottomBorder"
+                                    BorderThickness="0,0,2,2"
+                                    BorderBrush="{DynamicResource ControlDark}"
+                                    Margin="1,1,0,0"/>
+                            <ContentPresenter x:Name="Presenter" Margin="{TemplateBinding Padding}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="TopBorder" Property="BorderBrush" Value="{DynamicResource ControlDark}"/>
+                            <Setter TargetName="BottomBorder" Property="BorderBrush" Value="{DynamicResource ControlLight}"/>
+                            <Setter TargetName="Presenter" Property="RenderTransform">
+                                <Setter.Value>
+                                    <TranslateTransform X="1" Y="1"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="TextBlock.Foreground" Value="{DynamicResource ForegroundDisabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type RadioButton}"
+           BasedOn="{StaticResource RadioButtonPillBase}"
+           x:Key="VerticalRadioButtonPillBottom">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Border x:Name="Border"
+                            BorderThickness="1,0,1,1"
+                            CornerRadius="0,0,2,2"
+                            BorderBrush="{DynamicResource ControlOutline}">
+                        <Grid Background="{TemplateBinding Background}">
+                            <Border x:Name="TopBorder"
+                                    BorderThickness="2,2,0,0"
+                                    BorderBrush="{DynamicResource ControlLight}"/>
+                            <Border x:Name="BottomBorder"
+                                    BorderThickness="0,0,2,2"
+                                    BorderBrush="{DynamicResource ControlDark}"
+                                    Margin="1,1,0,0"/>
+                            <ContentPresenter x:Name="Presenter" Margin="{TemplateBinding Padding}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="TopBorder" Property="BorderBrush" Value="{DynamicResource ControlDark}"/>
+                            <Setter TargetName="BottomBorder" Property="BorderBrush" Value="{DynamicResource ControlLight}"/>
+                            <Setter TargetName="Presenter" Property="RenderTransform">
+                                <Setter.Value>
+                                    <TranslateTransform X="1" Y="1"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="TextBlock.Foreground" Value="{DynamicResource ForegroundDisabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

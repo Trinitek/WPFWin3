@@ -240,7 +240,222 @@
                     </StackPanel>
                 </TabItem>
                 <TabItem Header="RadioButton">
-
+                    <StackPanel>
+                        <StackPanel.Resources>
+                            <Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource GroupBoxBase}">
+                                <Setter Property="Margin" Value="4"/>
+                            </Style>
+                        </StackPanel.Resources>
+                        <GroupBox Header="Radio buttons (Group 1)">
+                            <GroupBox.Resources>
+                                <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource RadioButtonBase}">
+                                    <Setter Property="Margin" Value="4"/>
+                                </Style>
+                            </GroupBox.Resources>
+                            <WrapPanel Orientation="Horizontal">
+                                <RadioButton>
+                                    Default
+                                </RadioButton>
+                                <RadioButton IsThreeState="True"
+                                             IsChecked="{x:Null}">
+                                    Tristate null
+                                </RadioButton>
+                                <RadioButton IsChecked="True">
+                                    Checked
+                                </RadioButton>
+                                <RadioButton IsEnabled="False">
+                                    Unchecked and disabled
+                                </RadioButton>
+                            </WrapPanel>
+                        </GroupBox>
+                        <GroupBox Header="Radio buttons (Group 2)">
+                            <GroupBox.Resources>
+                                <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource RadioButtonBase}">
+                                    <Setter Property="Margin" Value="4"/>
+                                </Style>
+                            </GroupBox.Resources>
+                            <WrapPanel Orientation="Horizontal">
+                                <RadioButton>
+                                    Default
+                                </RadioButton>
+                                <RadioButton IsThreeState="True"
+                                             IsChecked="{x:Null}"
+                                             IsEnabled="False">
+                                    Tristate null and disabled
+                                </RadioButton>
+                                <RadioButton IsChecked="True"
+                                             IsEnabled="False">
+                                    Checked and disabled
+                                </RadioButton>
+                                <RadioButton IsEnabled="False">
+                                    Unchecked and disabled
+                                </RadioButton>
+                            </WrapPanel>
+                        </GroupBox>
+                        <GroupBox Header="Right to Left">
+                            <GroupBox.Resources>
+                                <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource RadioButtonBase}">
+                                    <Setter Property="Margin" Value="4"/>
+                                </Style>
+                            </GroupBox.Resources>
+                            <WrapPanel Orientation="Horizontal"
+                                       FlowDirection="RightToLeft">
+                                <RadioButton IsChecked="True">
+                                    Option A
+                                </RadioButton>
+                                <RadioButton>
+                                    Option B
+                                </RadioButton>
+                                <RadioButton>
+                                    Option C
+                                </RadioButton>
+                                <RadioButton>
+                                    Option D
+                                </RadioButton>
+                            </WrapPanel>
+                        </GroupBox>
+                        <GroupBox Header="Horizontal pill buttons (Group 1)">
+                            <GroupBox.Resources>
+                            </GroupBox.Resources>
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="4">
+                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillLeft}">
+                                    Default
+                                </RadioButton>
+                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillCenter}"
+                                             IsThreeState="True"
+                                             IsChecked="{x:Null}">
+                                    Tristate null
+                                </RadioButton>
+                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillCenter}"
+                                             IsChecked="True">
+                                    Checked
+                                </RadioButton>
+                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillRight}"
+                                             IsEnabled="False">
+                                    Unchecked and disabled
+                                </RadioButton>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Horizontal pill buttons (Group 2)">
+                            <GroupBox.Resources>
+                            </GroupBox.Resources>
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="4">
+                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillLeft}">
+                                    Default
+                                </RadioButton>
+                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillCenter}"
+                                             IsThreeState="True"
+                                             IsChecked="{x:Null}"
+                                             IsEnabled="False">
+                                    Tristate null and disabled
+                                </RadioButton>
+                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillCenter}"
+                                             IsChecked="True"
+                                             IsEnabled="False">
+                                    Checked and disabled
+                                </RadioButton>
+                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillRight}"
+                                             IsEnabled="False">
+                                    Unchecked and disabled
+                                </RadioButton>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Horizontal pill buttons (Group 3)">
+                            <GroupBox.Resources>
+                            </GroupBox.Resources>
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="4">
+                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillLeft}"
+                                             IsChecked="True">
+                                    Option A
+                                </RadioButton>
+                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillCenter}">
+                                    Option B
+                                </RadioButton>
+                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillCenter}">
+                                    Option C
+                                </RadioButton>
+                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillRight}">
+                                    Option D
+                                </RadioButton>
+                            </StackPanel>
+                        </GroupBox>
+                        <UniformGrid Columns="3">
+                            <GroupBox Header="Vertical pill buttons (Group 1)">
+                                <GroupBox.Resources>
+                                </GroupBox.Resources>
+                                <StackPanel Orientation="Vertical"
+                                            Margin="4"
+                                            HorizontalAlignment="Center">
+                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillTop}">
+                                        Default
+                                    </RadioButton>
+                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillCenter}"
+                                                 IsThreeState="True"
+                                                 IsChecked="{x:Null}">
+                                        Tristate null
+                                    </RadioButton>
+                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillCenter}"
+                                                 IsChecked="True">
+                                        Checked
+                                    </RadioButton>
+                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillBottom}"
+                                                 IsEnabled="False">
+                                        Unchecked and disabled
+                                    </RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="Vertical pill buttons (Group 2)">
+                                <GroupBox.Resources>
+                                </GroupBox.Resources>
+                                <StackPanel Orientation="Vertical"
+                                            Margin="4"
+                                            HorizontalAlignment="Center">
+                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillTop}">
+                                        Default
+                                    </RadioButton>
+                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillCenter}"
+                                                 IsThreeState="True"
+                                                 IsChecked="{x:Null}"
+                                                 IsEnabled="False">
+                                        Tristate null and disabled
+                                    </RadioButton>
+                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillCenter}"
+                                                 IsChecked="True"
+                                                 IsEnabled="False">
+                                        Checked and disabled
+                                    </RadioButton>
+                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillBottom}"
+                                                 IsEnabled="False">
+                                        Unchecked and disabled
+                                    </RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="Vertical pill buttons (Group 3)">
+                                <GroupBox.Resources>
+                                </GroupBox.Resources>
+                                <StackPanel Orientation="Vertical"
+                                            Margin="4"
+                                            HorizontalAlignment="Center">
+                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillTop}"
+                                                 IsChecked="True">
+                                        Option A
+                                    </RadioButton>
+                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillCenter}">
+                                        Option B
+                                    </RadioButton>
+                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillCenter}">
+                                        Option C
+                                    </RadioButton>
+                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillBottom}">
+                                        Option D
+                                    </RadioButton>
+                                </StackPanel>
+                            </GroupBox>
+                        </UniformGrid>
+                    </StackPanel>
                 </TabItem>
                 <TabItem Header="ScrollBar">
                     

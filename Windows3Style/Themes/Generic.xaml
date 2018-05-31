@@ -10,6 +10,7 @@
         <ResourceDictionary Source="GroupBox.xaml"/>
         <ResourceDictionary Source="Menu.xaml"/>
         <ResourceDictionary Source="ProgressBar.xaml"/>
+        <ResourceDictionary Source="RadioButton.xaml"/>
         <ResourceDictionary Source="Slider.xaml"/>
         <ResourceDictionary Source="TabControl.xaml"/>
     </ResourceDictionary.MergedDictionaries>
@@ -46,7 +47,8 @@
     <SolidColorBrush x:Key="BackgroundHighlight" Color="Blue"/>
 
     <SolidColorBrush x:Key="CheckBoxBackground" Color="White"/>
-    
+    <SolidColorBrush x:Key="RadioButtonBackground" Color="White"/>
+
     <SolidColorBrush x:Key="MenuBackground" Color="White"/>
     <FontFamily x:Key="MenuFont">Microsoft Sans Serif</FontFamily>
     <system:Double x:Key="MenuFontSize">14</system:Double>
