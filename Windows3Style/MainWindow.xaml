@@ -1,109 +1,109 @@
-﻿<Window x:Class="Windows3Style.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Windows3Style"
-        xmlns:converters="clr-namespace:Windows3Style.Converters"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="500"
-        FontFamily="{DynamicResource DefaultFont}"
-        FontSize="{DynamicResource DefaultFontSize}"
-        FontWeight="Bold"
-        RenderOptions.EdgeMode="Aliased"
-        TextOptions.TextRenderingMode="Aliased"
-        TextOptions.TextFormattingMode="Display"
-        SnapsToDevicePixels="True"
-        UseLayoutRounding="True"
-        Background="White">
+﻿<Window
+    x:Class="Windows3Style.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:Windows3Style.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Windows3Style"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="500"
+    Height="600"
+    Background="White"
+    FontFamily="{DynamicResource DefaultFont}"
+    FontSize="{DynamicResource DefaultFontSize}"
+    FontWeight="Bold"
+    RenderOptions.EdgeMode="Aliased"
+    SnapsToDevicePixels="True"
+    TextOptions.TextFormattingMode="Display"
+    TextOptions.TextRenderingMode="Aliased"
+    UseLayoutRounding="True"
+    mc:Ignorable="d">
     <Grid>
         <DockPanel>
-            <Menu DockPanel.Dock="Top"
-                  IsMainMenu="True">
+            <Menu DockPanel.Dock="Top" IsMainMenu="True">
                 <MenuItem Header="File">
                     <MenuItem Header="Submenu">
-                        <MenuItem Header="Sub item 1"/>
-                        <MenuItem Header="Sub item 2"/>
+                        <MenuItem Header="Sub item 1" />
+                        <MenuItem Header="Sub item 2" />
                     </MenuItem>
-                    <MenuItem Header="Disabled"
-                              IsEnabled="False"/>
-                    <Separator/>
-                    <MenuItem Header="Exit"
-                              InputGestureText="Alt+F4"/>
+                    <MenuItem Header="Disabled" IsEnabled="False" />
+                    <Separator />
+                    <MenuItem Header="Exit" InputGestureText="Alt+F4" />
                 </MenuItem>
                 <MenuItem Header="Spam">
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
-                    <MenuItem Header="Item"/>
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
+                    <MenuItem Header="Item" />
                 </MenuItem>
-                <MenuItem Header="About"/>
+                <MenuItem Header="About" />
             </Menu>
 
             <TabControl Margin="4">
                 <TabItem Header="Button">
                     <StackPanel>
                         <StackPanel.Resources>
-                            <Style TargetType="{x:Type Button}" BasedOn="{StaticResource ButtonBase}">
-                                <Setter Property="Margin" Value="0,2"/>
+                            <Style BasedOn="{StaticResource ButtonBase}" TargetType="{x:Type Button}">
+                                <Setter Property="Margin" Value="0,2" />
                             </Style>
                         </StackPanel.Resources>
 
-                        <Button Height="30" Width="100"
-                                IsEnabled="{Binding ElementName=EnabledCheck, Path=IsChecked}"
-                                IsDefault="{Binding ElementName=DefaultCheck, Path=IsChecked}">
+                        <Button
+                            Width="100"
+                            Height="30"
+                            IsDefault="{Binding ElementName=DefaultCheck, Path=IsChecked}"
+                            IsEnabled="{Binding ElementName=EnabledCheck, Path=IsChecked}">
                             _Hello world!
                         </Button>
-                        <CheckBox x:Name="EnabledCheck"
-                                  IsChecked="True">
+                        <CheckBox x:Name="EnabledCheck" IsChecked="True">
                             Is Enabled
                         </CheckBox>
-                        <CheckBox x:Name="DefaultCheck"
-                                  HorizontalAlignment="Center">
+                        <CheckBox x:Name="DefaultCheck" HorizontalAlignment="Center">
                             Is Default
                         </CheckBox>
 
@@ -112,8 +112,8 @@
                 <TabItem Header="CheckBox">
                     <StackPanel>
                         <StackPanel.Resources>
-                            <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource CheckBoxBase}">
-                                <Setter Property="Margin" Value="0,2"/>
+                            <Style BasedOn="{StaticResource CheckBoxBase}" TargetType="{x:Type CheckBox}">
+                                <Setter Property="Margin" Value="0,2" />
                             </Style>
                         </StackPanel.Resources>
 
@@ -126,17 +126,16 @@
                         <CheckBox IsEnabled="False">
                             Disabled
                         </CheckBox>
-                        <CheckBox IsEnabled="False"
-                                  IsChecked="True">
+                        <CheckBox IsChecked="True" IsEnabled="False">
                             Disabled and checked
                         </CheckBox>
-                        <CheckBox IsChecked="{x:Null}"
-                                  IsThreeState="True">
+                        <CheckBox IsChecked="{x:Null}" IsThreeState="True">
                             Indeterminate
                         </CheckBox>
-                        <CheckBox IsChecked="{x:Null}"
-                                  IsThreeState="True"
-                                  IsEnabled="False">
+                        <CheckBox
+                            IsChecked="{x:Null}"
+                            IsEnabled="False"
+                            IsThreeState="True">
                             Indeterminate and disabled
                         </CheckBox>
 
@@ -144,25 +143,20 @@
                 </TabItem>
                 <TabItem Header="GroupBox">
                     <StackPanel>
-                        <GroupBox Header="Empty GroupBox">
-                        </GroupBox>
+                        <GroupBox Header="Empty GroupBox" />
                         <GroupBox>
                             <GroupBox.Header>
                                 <TextBlock>
-                                    GroupBox with
-                                    <LineBreak/>
-                                    multiple
-                                    <LineBreak/>
-                                    lines in its header
-                                </TextBlock>
+                                    GroupBox with<LineBreak />
+                                    multiple<LineBreak />
+                                    lines in its header</TextBlock>
                             </GroupBox.Header>
                         </GroupBox>
                         <GroupBox Header="GroupBox with some things in it">
                             <UniformGrid Columns="3" Rows="2">
                                 <UniformGrid.Resources>
-                                    <Style TargetType="{x:Type Button}"
-                                           BasedOn="{StaticResource ButtonBase}">
-                                        <Setter Property="Margin" Value="4"/>
+                                    <Style BasedOn="{StaticResource ButtonBase}" TargetType="{x:Type Button}">
+                                        <Setter Property="Margin" Value="4" />
                                     </Style>
                                 </UniformGrid.Resources>
                                 <Button>Hamburger</Button>
@@ -177,15 +171,14 @@
                 </TabItem>
                 <TabItem Header="Panel">
                     <StackPanel>
-                        <TextBlock Margin="4"
-                                   TextWrapping="Wrap">
+                        <TextBlock Margin="4" TextWrapping="Wrap">
                             <Run>
                                 The window designers in the RAD tools of yesteryear each included a Panel control which
                                 provided a way to visually group controls. Unlike the GroupBox, the humble Panel has no
                                 label. Panels could typically be styled to be flat, or with a 3D bezeled or raised look.
                             </Run>
-                            <LineBreak/>
-                            <LineBreak/>
+                            <LineBreak />
+                            <LineBreak />
                             <Run>
                                 The Panel styles provided in this theme actually target ContentControl, not Panel.
                             </Run>
@@ -193,55 +186,47 @@
                         <UniformGrid Columns="2">
                             <UniformGrid.Resources>
                                 <Style TargetType="{x:Type TextBlock}">
-                                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                                    <Setter Property="VerticalAlignment" Value="Center"/>
-                                    <Setter Property="Margin" Value="32"/>
+                                    <Setter Property="HorizontalAlignment" Value="Center" />
+                                    <Setter Property="VerticalAlignment" Value="Center" />
+                                    <Setter Property="Margin" Value="32" />
                                 </Style>
                             </UniformGrid.Resources>
-                            <ContentControl Style="{StaticResource PanelBezelRaised1}"
-                                            Margin="4">
+                            <ContentControl Margin="4" Style="{StaticResource PanelBezelRaised1}">
                                 <TextBlock>
                                     PanelBezelRaised1
                                 </TextBlock>
                             </ContentControl>
-                            <ContentControl Style="{StaticResource PanelBezelRaised2}"
-                                            Margin="4">
+                            <ContentControl Margin="4" Style="{StaticResource PanelBezelRaised2}">
                                 <TextBlock>
                                     PanelBezelRaised2
                                 </TextBlock>
                             </ContentControl>
-                            <ContentControl Style="{StaticResource PanelBezelSunken1}"
-                                            Margin="4">
+                            <ContentControl Margin="4" Style="{StaticResource PanelBezelSunken1}">
                                 <TextBlock>
                                     PanelBezelSunken1
                                 </TextBlock>
                             </ContentControl>
-                            <ContentControl Style="{StaticResource PanelBezelSunken2}"
-                                            Margin="4">
+                            <ContentControl Margin="4" Style="{StaticResource PanelBezelSunken2}">
                                 <TextBlock>
                                     PanelBezelSunken2
                                 </TextBlock>
                             </ContentControl>
-                            <ContentControl Style="{StaticResource Panel3DRaised1}"
-                                            Margin="4">
+                            <ContentControl Margin="4" Style="{StaticResource Panel3DRaised1}">
                                 <TextBlock>
                                     Panel3DRaised1
                                 </TextBlock>
                             </ContentControl>
-                            <ContentControl Style="{StaticResource Panel3DRaised2}"
-                                            Margin="4">
+                            <ContentControl Margin="4" Style="{StaticResource Panel3DRaised2}">
                                 <TextBlock>
                                     Panel3DRaised2
                                 </TextBlock>
                             </ContentControl>
-                            <ContentControl Style="{StaticResource Panel3DSunken1}"
-                                            Margin="4">
+                            <ContentControl Margin="4" Style="{StaticResource Panel3DSunken1}">
                                 <TextBlock>
                                     Panel3DSunken1
                                 </TextBlock>
                             </ContentControl>
-                            <ContentControl Style="{StaticResource Panel3DSunken2}"
-                                            Margin="4">
+                            <ContentControl Margin="4" Style="{StaticResource Panel3DSunken2}">
                                 <TextBlock>
                                     Panel3DSunken2
                                 </TextBlock>
@@ -252,86 +237,86 @@
                 <TabItem Header="ProgressBar">
                     <StackPanel Grid.IsSharedSizeScope="True">
                         <StackPanel.Resources>
-                            <Style TargetType="{x:Type ProgressBar}" BasedOn="{StaticResource ProgressBarBase}">
-                                <Setter Property="Margin" Value="0,2"/>
-                                <Setter Property="Height" Value="20"/>
+                            <Style BasedOn="{StaticResource ProgressBarBase}" TargetType="{x:Type ProgressBar}">
+                                <Setter Property="Margin" Value="0,2" />
+                                <Setter Property="Height" Value="20" />
                             </Style>
                         </StackPanel.Resources>
 
-                        <ProgressBar/>
-                        <ProgressBar Value="25"/>
-                        <ProgressBar Value="50"/>
-                        <ProgressBar Value="75"/>
-                        <ProgressBar Value="100"/>
-                        <ProgressBar IsIndeterminate="True"/>
+                        <ProgressBar />
+                        <ProgressBar Value="25" />
+                        <ProgressBar Value="50" />
+                        <ProgressBar Value="75" />
+                        <ProgressBar Value="100" />
+                        <ProgressBar IsIndeterminate="True" />
 
-                        <GroupBox Margin="4"
-                                  Padding="4"
-                                  Header="Experimenter">
+                        <GroupBox
+                            Margin="4"
+                            Padding="4"
+                            Header="Experimenter">
                             <StackPanel>
 
-                                <ProgressBar Value="{Binding ElementName=ProgressBar_Value, Path=Text}"
-                                             IsIndeterminate="{Binding ElementName=ProgressBar_Indeterminate, Path=IsChecked}"/>
-                                
-                                <CheckBox x:Name="ProgressBar_Indeterminate"
-                                          Margin="0,2">
+                                <ProgressBar IsIndeterminate="{Binding ElementName=ProgressBar_Indeterminate, Path=IsChecked}" Value="{Binding ElementName=ProgressBar_Value, Path=Text}" />
+
+                                <CheckBox x:Name="ProgressBar_Indeterminate" Margin="0,2">
                                     Indeterminate
                                 </CheckBox>
-                                
+
                                 <Grid IsEnabled="{Binding ElementName=ProgressBar_Indeterminate, Path=IsChecked, Converter={converters:InverseBooleanConverter}}">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="auto" SharedSizeGroup="ProgressBar_Label"/>
-                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto" SharedSizeGroup="ProgressBar_Label" />
+                                        <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
-                                    
+
                                     <Label Grid.Column="0">
                                         Value
                                     </Label>
-                                    <TextBox x:Name="ProgressBar_Value"
-                                             Grid.Column="1"
-                                             Width="40"
-                                             HorizontalAlignment="Left"
-                                             Text="{Binding ElementName=ProgressBar_Slider, Path=Value}"/>
+                                    <TextBox
+                                        x:Name="ProgressBar_Value"
+                                        Grid.Column="1"
+                                        Width="40"
+                                        HorizontalAlignment="Left"
+                                        Text="{Binding ElementName=ProgressBar_Slider, Path=Value}" />
                                 </Grid>
                                 <Grid IsEnabled="{Binding ElementName=ProgressBar_Indeterminate, Path=IsChecked, Converter={converters:InverseBooleanConverter}}">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="auto" SharedSizeGroup="ProgressBar_Label"/>
-                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto" SharedSizeGroup="ProgressBar_Label" />
+                                        <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
 
                                     <Label Grid.Column="0">
                                         Slider
                                     </Label>
-                                    <Slider Grid.Column="1"
-                                            x:Name="ProgressBar_Slider"
-                                            Minimum="0"
-                                            Maximum="100"/>
+                                    <Slider
+                                        x:Name="ProgressBar_Slider"
+                                        Grid.Column="1"
+                                        Maximum="100"
+                                        Minimum="0" />
                                 </Grid>
                             </StackPanel>
-                            
+
                         </GroupBox>
-                        
+
                     </StackPanel>
                 </TabItem>
                 <TabItem Header="RadioButton">
                     <StackPanel>
                         <StackPanel.Resources>
-                            <Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource GroupBoxBase}">
-                                <Setter Property="Margin" Value="4"/>
+                            <Style BasedOn="{StaticResource GroupBoxBase}" TargetType="{x:Type GroupBox}">
+                                <Setter Property="Margin" Value="4" />
                             </Style>
                         </StackPanel.Resources>
                         <GroupBox Header="Radio buttons (Group 1)">
                             <GroupBox.Resources>
-                                <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource RadioButtonBase}">
-                                    <Setter Property="Margin" Value="4"/>
+                                <Style BasedOn="{StaticResource RadioButtonBase}" TargetType="{x:Type RadioButton}">
+                                    <Setter Property="Margin" Value="4" />
                                 </Style>
                             </GroupBox.Resources>
                             <WrapPanel Orientation="Horizontal">
                                 <RadioButton>
                                     Default
                                 </RadioButton>
-                                <RadioButton IsThreeState="True"
-                                             IsChecked="{x:Null}">
+                                <RadioButton IsChecked="{x:Null}" IsThreeState="True">
                                     Tristate null
                                 </RadioButton>
                                 <RadioButton IsChecked="True">
@@ -344,21 +329,21 @@
                         </GroupBox>
                         <GroupBox Header="Radio buttons (Group 2)">
                             <GroupBox.Resources>
-                                <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource RadioButtonBase}">
-                                    <Setter Property="Margin" Value="4"/>
+                                <Style BasedOn="{StaticResource RadioButtonBase}" TargetType="{x:Type RadioButton}">
+                                    <Setter Property="Margin" Value="4" />
                                 </Style>
                             </GroupBox.Resources>
                             <WrapPanel Orientation="Horizontal">
                                 <RadioButton>
                                     Default
                                 </RadioButton>
-                                <RadioButton IsThreeState="True"
-                                             IsChecked="{x:Null}"
-                                             IsEnabled="False">
+                                <RadioButton
+                                    IsChecked="{x:Null}"
+                                    IsEnabled="False"
+                                    IsThreeState="True">
                                     Tristate null and disabled
                                 </RadioButton>
-                                <RadioButton IsChecked="True"
-                                             IsEnabled="False">
+                                <RadioButton IsChecked="True" IsEnabled="False">
                                     Checked and disabled
                                 </RadioButton>
                                 <RadioButton IsEnabled="False">
@@ -368,12 +353,11 @@
                         </GroupBox>
                         <GroupBox Header="Right to Left">
                             <GroupBox.Resources>
-                                <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource RadioButtonBase}">
-                                    <Setter Property="Margin" Value="4"/>
+                                <Style BasedOn="{StaticResource RadioButtonBase}" TargetType="{x:Type RadioButton}">
+                                    <Setter Property="Margin" Value="4" />
                                 </Style>
                             </GroupBox.Resources>
-                            <WrapPanel Orientation="Horizontal"
-                                       FlowDirection="RightToLeft">
+                            <WrapPanel FlowDirection="RightToLeft" Orientation="Horizontal">
                                 <RadioButton IsChecked="True">
                                     Option A
                                 </RadioButton>
@@ -389,60 +373,53 @@
                             </WrapPanel>
                         </GroupBox>
                         <GroupBox Header="Horizontal pill buttons (Group 1)">
-                            <GroupBox.Resources>
-                            </GroupBox.Resources>
-                            <StackPanel Orientation="Horizontal"
-                                        Margin="4">
+                            <GroupBox.Resources />
+                            <StackPanel Margin="4" Orientation="Horizontal">
                                 <RadioButton Style="{StaticResource HorizontalRadioButtonPillLeft}">
                                     Default
                                 </RadioButton>
-                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillCenter}"
-                                             IsThreeState="True"
-                                             IsChecked="{x:Null}">
+                                <RadioButton
+                                    IsChecked="{x:Null}"
+                                    IsThreeState="True"
+                                    Style="{StaticResource HorizontalRadioButtonPillCenter}">
                                     Tristate null
                                 </RadioButton>
-                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillCenter}"
-                                             IsChecked="True">
+                                <RadioButton IsChecked="True" Style="{StaticResource HorizontalRadioButtonPillCenter}">
                                     Checked
                                 </RadioButton>
-                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillRight}"
-                                             IsEnabled="False">
+                                <RadioButton IsEnabled="False" Style="{StaticResource HorizontalRadioButtonPillRight}">
                                     Unchecked and disabled
                                 </RadioButton>
                             </StackPanel>
                         </GroupBox>
                         <GroupBox Header="Horizontal pill buttons (Group 2)">
-                            <GroupBox.Resources>
-                            </GroupBox.Resources>
-                            <StackPanel Orientation="Horizontal"
-                                        Margin="4">
+                            <GroupBox.Resources />
+                            <StackPanel Margin="4" Orientation="Horizontal">
                                 <RadioButton Style="{StaticResource HorizontalRadioButtonPillLeft}">
                                     Default
                                 </RadioButton>
-                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillCenter}"
-                                             IsThreeState="True"
-                                             IsChecked="{x:Null}"
-                                             IsEnabled="False">
+                                <RadioButton
+                                    IsChecked="{x:Null}"
+                                    IsEnabled="False"
+                                    IsThreeState="True"
+                                    Style="{StaticResource HorizontalRadioButtonPillCenter}">
                                     Tristate null and disabled
                                 </RadioButton>
-                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillCenter}"
-                                             IsChecked="True"
-                                             IsEnabled="False">
+                                <RadioButton
+                                    IsChecked="True"
+                                    IsEnabled="False"
+                                    Style="{StaticResource HorizontalRadioButtonPillCenter}">
                                     Checked and disabled
                                 </RadioButton>
-                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillRight}"
-                                             IsEnabled="False">
+                                <RadioButton IsEnabled="False" Style="{StaticResource HorizontalRadioButtonPillRight}">
                                     Unchecked and disabled
                                 </RadioButton>
                             </StackPanel>
                         </GroupBox>
                         <GroupBox Header="Horizontal pill buttons (Group 3)">
-                            <GroupBox.Resources>
-                            </GroupBox.Resources>
-                            <StackPanel Orientation="Horizontal"
-                                        Margin="4">
-                                <RadioButton Style="{StaticResource HorizontalRadioButtonPillLeft}"
-                                             IsChecked="True">
+                            <GroupBox.Resources />
+                            <StackPanel Margin="4" Orientation="Horizontal">
+                                <RadioButton IsChecked="True" Style="{StaticResource HorizontalRadioButtonPillLeft}">
                                     Option A
                                 </RadioButton>
                                 <RadioButton Style="{StaticResource HorizontalRadioButtonPillCenter}">
@@ -458,63 +435,62 @@
                         </GroupBox>
                         <UniformGrid Columns="3">
                             <GroupBox Header="Vertical pill buttons (Group 1)">
-                                <GroupBox.Resources>
-                                </GroupBox.Resources>
-                                <StackPanel Orientation="Vertical"
-                                            Margin="4"
-                                            HorizontalAlignment="Center">
+                                <GroupBox.Resources />
+                                <StackPanel
+                                    Margin="4"
+                                    HorizontalAlignment="Center"
+                                    Orientation="Vertical">
                                     <RadioButton Style="{StaticResource VerticalRadioButtonPillTop}">
                                         Default
                                     </RadioButton>
-                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillCenter}"
-                                                 IsThreeState="True"
-                                                 IsChecked="{x:Null}">
+                                    <RadioButton
+                                        IsChecked="{x:Null}"
+                                        IsThreeState="True"
+                                        Style="{StaticResource VerticalRadioButtonPillCenter}">
                                         Tristate null
                                     </RadioButton>
-                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillCenter}"
-                                                 IsChecked="True">
+                                    <RadioButton IsChecked="True" Style="{StaticResource VerticalRadioButtonPillCenter}">
                                         Checked
                                     </RadioButton>
-                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillBottom}"
-                                                 IsEnabled="False">
+                                    <RadioButton IsEnabled="False" Style="{StaticResource VerticalRadioButtonPillBottom}">
                                         Unchecked and disabled
                                     </RadioButton>
                                 </StackPanel>
                             </GroupBox>
                             <GroupBox Header="Vertical pill buttons (Group 2)">
-                                <GroupBox.Resources>
-                                </GroupBox.Resources>
-                                <StackPanel Orientation="Vertical"
-                                            Margin="4"
-                                            HorizontalAlignment="Center">
+                                <GroupBox.Resources />
+                                <StackPanel
+                                    Margin="4"
+                                    HorizontalAlignment="Center"
+                                    Orientation="Vertical">
                                     <RadioButton Style="{StaticResource VerticalRadioButtonPillTop}">
                                         Default
                                     </RadioButton>
-                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillCenter}"
-                                                 IsThreeState="True"
-                                                 IsChecked="{x:Null}"
-                                                 IsEnabled="False">
+                                    <RadioButton
+                                        IsChecked="{x:Null}"
+                                        IsEnabled="False"
+                                        IsThreeState="True"
+                                        Style="{StaticResource VerticalRadioButtonPillCenter}">
                                         Tristate null and disabled
                                     </RadioButton>
-                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillCenter}"
-                                                 IsChecked="True"
-                                                 IsEnabled="False">
+                                    <RadioButton
+                                        IsChecked="True"
+                                        IsEnabled="False"
+                                        Style="{StaticResource VerticalRadioButtonPillCenter}">
                                         Checked and disabled
                                     </RadioButton>
-                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillBottom}"
-                                                 IsEnabled="False">
+                                    <RadioButton IsEnabled="False" Style="{StaticResource VerticalRadioButtonPillBottom}">
                                         Unchecked and disabled
                                     </RadioButton>
                                 </StackPanel>
                             </GroupBox>
                             <GroupBox Header="Vertical pill buttons (Group 3)">
-                                <GroupBox.Resources>
-                                </GroupBox.Resources>
-                                <StackPanel Orientation="Vertical"
-                                            Margin="4"
-                                            HorizontalAlignment="Center">
-                                    <RadioButton Style="{StaticResource VerticalRadioButtonPillTop}"
-                                                 IsChecked="True">
+                                <GroupBox.Resources />
+                                <StackPanel
+                                    Margin="4"
+                                    HorizontalAlignment="Center"
+                                    Orientation="Vertical">
+                                    <RadioButton IsChecked="True" Style="{StaticResource VerticalRadioButtonPillTop}">
                                         Option A
                                     </RadioButton>
                                     <RadioButton Style="{StaticResource VerticalRadioButtonPillCenter}">
@@ -531,119 +507,124 @@
                         </UniformGrid>
                     </StackPanel>
                 </TabItem>
-                <TabItem Header="ScrollBar">
-                    
-                </TabItem>
+                <TabItem Header="ScrollBar" />
                 <TabItem Header="Slider">
-                    <StackPanel Grid.IsSharedSizeScope="True" Background="Transparent">
+                    <StackPanel Background="Transparent" Grid.IsSharedSizeScope="True">
                         <StackPanel.Resources>
-                            <Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource GroupBoxBase}">
-                                <Setter Property="Margin" Value="2,0"/>
-                                <Setter Property="Padding" Value="4"/>
+                            <Style BasedOn="{StaticResource GroupBoxBase}" TargetType="{x:Type GroupBox}">
+                                <Setter Property="Margin" Value="2,0" />
+                                <Setter Property="Padding" Value="4" />
                             </Style>
                         </StackPanel.Resources>
 
                         <StackPanel Orientation="Horizontal">
-                            <Thumb Style="{StaticResource SliderThumb}"/>
-                            <Thumb Style="{StaticResource SliderThumbDown}"/>
-                            <Thumb Style="{StaticResource SliderThumbUp}"/>
-                            <Thumb Style="{StaticResource SliderThumbRight}"/>
-                            <Thumb Style="{StaticResource SliderThumbLeft}"/>
+                            <Thumb Style="{StaticResource SliderThumb}" />
+                            <Thumb Style="{StaticResource SliderThumbDown}" />
+                            <Thumb Style="{StaticResource SliderThumbUp}" />
+                            <Thumb Style="{StaticResource SliderThumbRight}" />
+                            <Thumb Style="{StaticResource SliderThumbLeft}" />
                         </StackPanel>
 
                         <GroupBox Header="Default">
-                            <Slider/>
+                            <Slider />
                         </GroupBox>
                         <GroupBox Header="Selection range">
-                            <Slider SelectionStart="25"
-                                    SelectionEnd="75"
-                                    Minimum="0"
-                                    Maximum="100"
-                                    IsSelectionRangeEnabled="True"
-                                    Value="45"/>
+                            <Slider
+                                IsSelectionRangeEnabled="True"
+                                Maximum="100"
+                                Minimum="0"
+                                SelectionEnd="75"
+                                SelectionStart="25"
+                                Value="45" />
                         </GroupBox>
                         <GroupBox Header="Double ticks (green foreground)">
-                            <Slider SelectionStart="25"
-                                    SelectionEnd="75"
-                                    Minimum="0"
-                                    Maximum="100"
-                                    IsSelectionRangeEnabled="True"
-                                    TickPlacement="Both"
-                                    TickFrequency="5"
-                                    Value="60"
-                                    Foreground="Green"/>
+                            <Slider
+                                Foreground="Green"
+                                IsSelectionRangeEnabled="True"
+                                Maximum="100"
+                                Minimum="0"
+                                SelectionEnd="75"
+                                SelectionStart="25"
+                                TickFrequency="5"
+                                TickPlacement="Both"
+                                Value="60" />
                         </GroupBox>
                         <GroupBox Header="Top ticks">
-                            <Slider SelectionStart="25"
-                                    SelectionEnd="75"
-                                    Minimum="0"
-                                    Maximum="100"
-                                    IsSelectionRangeEnabled="True"
-                                    TickPlacement="TopLeft"
-                                    TickFrequency="5"
-                                    Value="75"/>
+                            <Slider
+                                IsSelectionRangeEnabled="True"
+                                Maximum="100"
+                                Minimum="0"
+                                SelectionEnd="75"
+                                SelectionStart="25"
+                                TickFrequency="5"
+                                TickPlacement="TopLeft"
+                                Value="75" />
                         </GroupBox>
                         <GroupBox Header="Bottom ticks">
-                            <Slider SelectionStart="25"
-                                    SelectionEnd="75"
-                                    Minimum="0"
-                                    Maximum="100"
-                                    IsSelectionRangeEnabled="True"
-                                    TickPlacement="BottomRight"
-                                    TickFrequency="5"
-                                    Value="65"/>
+                            <Slider
+                                IsSelectionRangeEnabled="True"
+                                Maximum="100"
+                                Minimum="0"
+                                SelectionEnd="75"
+                                SelectionStart="25"
+                                TickFrequency="5"
+                                TickPlacement="BottomRight"
+                                Value="65" />
                         </GroupBox>
-                        <UniformGrid Columns="5"
-                                     Height="150">
+                        <UniformGrid Height="150" Columns="5">
                             <UniformGrid.Resources>
-                                <Style TargetType="{x:Type Slider}" BasedOn="{StaticResource SliderBase}">
-                                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Style BasedOn="{StaticResource SliderBase}" TargetType="{x:Type Slider}">
+                                    <Setter Property="HorizontalAlignment" Value="Center" />
                                 </Style>
                             </UniformGrid.Resources>
                             <GroupBox Header="Default">
-                                <Slider Orientation="Vertical"/>
+                                <Slider Orientation="Vertical" />
                             </GroupBox>
                             <GroupBox Header="Selection range">
-                                <Slider SelectionStart="25"
-                                        SelectionEnd="75"
-                                        Minimum="0"
-                                        Maximum="100"
-                                        IsSelectionRangeEnabled="True"
-                                        Value="45"
-                                        Orientation="Vertical"/>
+                                <Slider
+                                    IsSelectionRangeEnabled="True"
+                                    Maximum="100"
+                                    Minimum="0"
+                                    Orientation="Vertical"
+                                    SelectionEnd="75"
+                                    SelectionStart="25"
+                                    Value="45" />
                             </GroupBox>
                             <GroupBox Header="Double ticks">
-                                <Slider SelectionStart="25"
-                                        SelectionEnd="75"
-                                        Minimum="0"
-                                        Maximum="100"
-                                        IsSelectionRangeEnabled="True"
-                                        TickPlacement="Both"
-                                        TickFrequency="5"
-                                        Value="60"
-                                        Orientation="Vertical"/>
+                                <Slider
+                                    IsSelectionRangeEnabled="True"
+                                    Maximum="100"
+                                    Minimum="0"
+                                    Orientation="Vertical"
+                                    SelectionEnd="75"
+                                    SelectionStart="25"
+                                    TickFrequency="5"
+                                    TickPlacement="Both"
+                                    Value="60" />
                             </GroupBox>
                             <GroupBox Header="Right ticks">
-                                <Slider SelectionStart="25"
-                                        SelectionEnd="75"
-                                        Minimum="0"
-                                        Maximum="100"
-                                        IsSelectionRangeEnabled="True"
-                                        TickPlacement="BottomRight"
-                                        TickFrequency="10"
-                                        Value="75"
-                                        Orientation="Vertical"/>
+                                <Slider
+                                    IsSelectionRangeEnabled="True"
+                                    Maximum="100"
+                                    Minimum="0"
+                                    Orientation="Vertical"
+                                    SelectionEnd="75"
+                                    SelectionStart="25"
+                                    TickFrequency="10"
+                                    TickPlacement="BottomRight"
+                                    Value="75" />
                             </GroupBox>
                             <GroupBox Header="Left ticks">
-                                <Slider SelectionStart="25"
-                                        SelectionEnd="75"
-                                        Minimum="0"
-                                        Maximum="100"
-                                        IsSelectionRangeEnabled="True"
-                                        TickPlacement="TopLeft"
-                                        TickFrequency="10"
-                                        Value="65"
-                                        Orientation="Vertical"/>
+                                <Slider
+                                    IsSelectionRangeEnabled="True"
+                                    Maximum="100"
+                                    Minimum="0"
+                                    Orientation="Vertical"
+                                    SelectionEnd="75"
+                                    SelectionStart="25"
+                                    TickFrequency="10"
+                                    TickPlacement="TopLeft"
+                                    Value="65" />
                             </GroupBox>
                         </UniformGrid>
                     </StackPanel>
@@ -651,16 +632,11 @@
                 <TabItem Header="Icons">
                     <StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Path Fill="{DynamicResource Foreground}"
-                                  Data="{DynamicResource UpArrowData}"/>
-                            <Path Fill="{DynamicResource Foreground}"
-                                  Data="{DynamicResource DownArrowData}"/>
-                            <Path Fill="{DynamicResource Foreground}"
-                                  Data="{DynamicResource RightArrowData}"/>
-                            <Path Fill="{DynamicResource Foreground}"
-                                  Data="{DynamicResource LeftArrowData}"/>
-                            <Path Fill="{DynamicResource Foreground}"
-                                  Data="{DynamicResource UpDownArrowData}"/>
+                            <Path Data="{DynamicResource UpArrowData}" Fill="{DynamicResource Foreground}" />
+                            <Path Data="{DynamicResource DownArrowData}" Fill="{DynamicResource Foreground}" />
+                            <Path Data="{DynamicResource RightArrowData}" Fill="{DynamicResource Foreground}" />
+                            <Path Data="{DynamicResource LeftArrowData}" Fill="{DynamicResource Foreground}" />
+                            <Path Data="{DynamicResource UpDownArrowData}" Fill="{DynamicResource Foreground}" />
                         </StackPanel>
                     </StackPanel>
                 </TabItem>
