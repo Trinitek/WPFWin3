@@ -16,6 +16,7 @@
         <ResourceDictionary Source="Slider.xaml" />
         <ResourceDictionary Source="TabControl.xaml" />
         <ResourceDictionary Source="TextBox.xaml" />
+        <ResourceDictionary Source="ToggleButton.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <FontFamily x:Key="DefaultFont">Microsoft Sans Serif</FontFamily>

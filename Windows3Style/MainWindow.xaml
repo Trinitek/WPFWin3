@@ -741,6 +741,75 @@
                         </TextBox>
                     </StackPanel>
                 </TabItem>
+                <TabItem Header="ToggleButton">
+                    <StackPanel>
+                        <StackPanel.Resources>
+                            <Style BasedOn="{StaticResource ToggleButtonBase}" TargetType="{x:Type ToggleButton}">
+                                <Setter Property="Margin" Value="4" />
+                            </Style>
+                        </StackPanel.Resources>
+                        <UniformGrid Columns="4">
+                            <ToggleButton>
+                                Default
+                            </ToggleButton>
+                            <ToggleButton IsChecked="True">
+                                Checked
+                            </ToggleButton>
+                            <ToggleButton IsEnabled="False">
+                                Disabled
+                            </ToggleButton>
+                            <ToggleButton IsChecked="True" IsEnabled="False">
+                                Disabled and checked
+                            </ToggleButton>
+                            <ToggleButton IsChecked="True" IsThreeState="True">
+                                Tristate checked
+                            </ToggleButton>
+                            <ToggleButton
+                                IsChecked="True"
+                                IsEnabled="False"
+                                IsThreeState="True">
+                                Tristate checked and disabled
+                            </ToggleButton>
+                            <ToggleButton
+                                IsChecked="{x:Null}"
+                                IsEnabled="True"
+                                IsThreeState="True">
+                                Tristate null
+                            </ToggleButton>
+                            <ToggleButton
+                                IsChecked="{x:Null}"
+                                IsEnabled="False"
+                                IsThreeState="True">
+                                Tristate null and disabled
+                            </ToggleButton>
+                        </UniformGrid>
+                        <UniformGrid Columns="2">
+                            <ToggleButton>
+                                <TextBlock>
+                                    <Run>These ToggleButtons</Run>
+                                    <LineBreak />
+                                    <Run>have multiple lines.</Run>
+                                </TextBlock>
+                            </ToggleButton>
+                            <ToggleButton Height="50">
+                                <TextBlock>
+                                    <Run>These ToggleButtons</Run>
+                                    <LineBreak />
+                                    <Run>have multiple lines.</Run>
+                                </TextBlock>
+                            </ToggleButton>
+                        </UniformGrid>
+                        <ToggleButton Padding="4">
+                            Padding=4
+                        </ToggleButton>
+                        <ToggleButton Background="Green" Foreground="Yellow">
+                            <TextBlock>
+                                Background=Green<LineBreak />
+                                Foreground=Yellow</TextBlock>
+
+                        </ToggleButton>
+                    </StackPanel>
+                </TabItem>
                 <TabItem Header="Icons">
                     <StackPanel>
                         <StackPanel Orientation="Horizontal">
