@@ -148,54 +148,70 @@
                                 <Setter Property="Margin" Value="4" />
                             </Style>
                         </StackPanel.Resources>
-                        <ComboBox />
-                        <ComboBox>
-                            <ComboBoxItem IsSelected="True">
-                                Item A
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Item B
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Item C
-                            </ComboBoxItem>
-                        </ComboBox>
-                        <ComboBox IsEditable="True" />
-                        <ComboBox IsEditable="True">
-                            <ComboBoxItem IsSelected="True">
-                                Item A
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Item B
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Item C
-                            </ComboBoxItem>
-                        </ComboBox>
-                        <ComboBox IsEnabled="False" />
-                        <ComboBox>
-                            <ComboBoxItem IsEnabled="False" IsSelected="True">
-                                Item A
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Item B
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Item C
-                            </ComboBoxItem>
-                        </ComboBox>
-                        <ComboBox IsEditable="True" IsEnabled="False" />
-                        <ComboBox IsEditable="True" IsEnabled="False">
-                            <ComboBoxItem IsSelected="True">
-                                Item A
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Item B
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Item C
-                            </ComboBoxItem>
-                        </ComboBox>
+                        <GroupBox Header="Default">
+                            <StackPanel>
+                                <ComboBox />
+                                <ComboBox>
+                                    <ComboBoxItem IsSelected="True">
+                                        Item A
+                                    </ComboBoxItem>
+                                    <ComboBoxItem>
+                                        Item B
+                                    </ComboBoxItem>
+                                    <ComboBoxItem>
+                                        Item C
+                                    </ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Editable">
+                            <StackPanel>
+                                <ComboBox IsEditable="True" />
+                                <ComboBox IsEditable="True">
+                                    <ComboBoxItem IsSelected="True">
+                                        Item A
+                                    </ComboBoxItem>
+                                    <ComboBoxItem>
+                                        Item B
+                                    </ComboBoxItem>
+                                    <ComboBoxItem>
+                                        Item C
+                                    </ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Disabled">
+                            <StackPanel>
+                                <ComboBox IsEnabled="False" />
+                                <ComboBox>
+                                    <ComboBoxItem IsEnabled="False" IsSelected="True">
+                                        Item A
+                                    </ComboBoxItem>
+                                    <ComboBoxItem>
+                                        Item B
+                                    </ComboBoxItem>
+                                    <ComboBoxItem>
+                                        Item C
+                                    </ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Editable and disabled">
+                            <StackPanel>
+                                <ComboBox IsEditable="True" IsEnabled="False" />
+                                <ComboBox IsEditable="True" IsEnabled="False">
+                                    <ComboBoxItem IsSelected="True">
+                                        Item A
+                                    </ComboBoxItem>
+                                    <ComboBoxItem>
+                                        Item B
+                                    </ComboBoxItem>
+                                    <ComboBoxItem>
+                                        Item C
+                                    </ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
+                        </GroupBox>
                         <ComboBox Height="30">
                             <ComboBoxItem IsSelected="True">
                                 Height=30
