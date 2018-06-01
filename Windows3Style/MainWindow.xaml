@@ -185,7 +185,7 @@
                                 <ComboBox IsEnabled="False" />
                                 <ComboBox>
                                     <ComboBoxItem IsEnabled="False" IsSelected="True">
-                                        Item A
+                                        Item A (Disabling a ComboBox with an item selected does not truly disable it)
                                     </ComboBoxItem>
                                     <ComboBoxItem>
                                         Item B
