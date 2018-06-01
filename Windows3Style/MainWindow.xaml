@@ -141,6 +141,94 @@
 
                     </StackPanel>
                 </TabItem>
+                <TabItem Header="ComboBox">
+                    <StackPanel>
+                        <StackPanel.Resources>
+                            <Style BasedOn="{StaticResource ComboBoxBase}" TargetType="{x:Type ComboBox}">
+                                <Setter Property="Margin" Value="4" />
+                            </Style>
+                        </StackPanel.Resources>
+                        <ComboBox />
+                        <ComboBox>
+                            <ComboBoxItem IsSelected="True">
+                                Item A
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                Item B
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                Item C
+                            </ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox IsEditable="True" />
+                        <ComboBox IsEditable="True">
+                            <ComboBoxItem IsSelected="True">
+                                Item A
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                Item B
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                Item C
+                            </ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox IsEnabled="False" />
+                        <ComboBox>
+                            <ComboBoxItem IsEnabled="False" IsSelected="True">
+                                Item A
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                Item B
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                Item C
+                            </ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox IsEditable="True" IsEnabled="False" />
+                        <ComboBox IsEditable="True" IsEnabled="False">
+                            <ComboBoxItem IsSelected="True">
+                                Item A
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                Item B
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                Item C
+                            </ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Height="30">
+                            <ComboBoxItem IsSelected="True">
+                                Height=30
+                            </ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox
+                            Height="30"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center">
+                            <ComboBoxItem IsSelected="True">
+                                Centered horizontally and vertically
+                            </ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Padding="8">
+                            <ComboBoxItem IsSelected="True">
+                                Padding=8
+                            </ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Background="Blue" Foreground="Yellow">
+                            <ComboBoxItem IsSelected="True">
+                                Background=Blue, Foreground=Yellow
+                            </ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox
+                            Background="Blue"
+                            Foreground="Yellow"
+                            IsEditable="True">
+                            <ComboBoxItem IsSelected="True">
+                                Background=Blue, Foreground=Yellow, Editable
+                            </ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                </TabItem>
                 <TabItem Header="GroupBox">
                     <StackPanel>
                         <GroupBox Header="Empty GroupBox" />
@@ -788,14 +876,14 @@
                                 <TextBlock>
                                     <Run>These ToggleButtons</Run>
                                     <LineBreak />
-                                    <Run>have multiple lines.</Run>
+                                    <Run>have Height=50.</Run>
                                 </TextBlock>
                             </ToggleButton>
                             <ToggleButton Height="50">
                                 <TextBlock>
                                     <Run>These ToggleButtons</Run>
                                     <LineBreak />
-                                    <Run>have multiple lines.</Run>
+                                    <Run>have Height=50.</Run>
                                 </TextBlock>
                             </ToggleButton>
                         </UniformGrid>
