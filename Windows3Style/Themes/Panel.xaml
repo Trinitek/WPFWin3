@@ -2,7 +2,14 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:Windows3Style.Themes">
-    <Style x:Key="PanelBezelRaised1" TargetType="{x:Type ContentControl}">
+    <Style x:Key="PanelBase" TargetType="{x:Type ContentControl}">
+        <Setter Property="Focusable" Value="False" />
+    </Style>
+
+    <Style
+        x:Key="PanelBezelRaised1"
+        BasedOn="{StaticResource PanelBase}"
+        TargetType="{x:Type ContentControl}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
@@ -27,7 +34,10 @@
         </Setter>
     </Style>
 
-    <Style x:Key="PanelBezelRaised2" TargetType="{x:Type ContentControl}">
+    <Style
+        x:Key="PanelBezelRaised2"
+        BasedOn="{StaticResource PanelBase}"
+        TargetType="{x:Type ContentControl}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
@@ -52,7 +62,10 @@
         </Setter>
     </Style>
 
-    <Style x:Key="PanelBezelSunken1" TargetType="{x:Type ContentControl}">
+    <Style
+        x:Key="PanelBezelSunken1"
+        BasedOn="{StaticResource PanelBase}"
+        TargetType="{x:Type ContentControl}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
@@ -77,7 +90,10 @@
         </Setter>
     </Style>
 
-    <Style x:Key="PanelBezelSunken2" TargetType="{x:Type ContentControl}">
+    <Style
+        x:Key="PanelBezelSunken2"
+        BasedOn="{StaticResource PanelBase}"
+        TargetType="{x:Type ContentControl}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
@@ -102,7 +118,10 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Panel3DRaised1" TargetType="{x:Type ContentControl}">
+    <Style
+        x:Key="Panel3DRaised1"
+        BasedOn="{StaticResource PanelBase}"
+        TargetType="{x:Type ContentControl}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
@@ -119,7 +138,10 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Panel3DRaised2" TargetType="{x:Type ContentControl}">
+    <Style
+        x:Key="Panel3DRaised2"
+        BasedOn="{StaticResource PanelBase}"
+        TargetType="{x:Type ContentControl}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
@@ -136,7 +158,10 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Panel3DSunken1" TargetType="{x:Type ContentControl}">
+    <Style
+        x:Key="Panel3DSunken1"
+        BasedOn="{StaticResource PanelBase}"
+        TargetType="{x:Type ContentControl}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
@@ -153,7 +178,10 @@
         </Setter>
     </Style>
 
-    <Style x:Key="Panel3DSunken2" TargetType="{x:Type ContentControl}">
+    <Style
+        x:Key="Panel3DSunken2"
+        BasedOn="{StaticResource PanelBase}"
+        TargetType="{x:Type ContentControl}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
