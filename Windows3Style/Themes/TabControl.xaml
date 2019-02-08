@@ -73,7 +73,7 @@
                                     x:Name="BottomBorder"
                                     BorderBrush="{DynamicResource ControlDark}"
                                     BorderThickness="0,0,2,0" />
-                                <ContentControl Margin="12,3,12,0">
+                                <ContentControl Margin="12,3,12,0" Focusable="False">
                                     <ContentPresenter
                                         x:Name="ContentSite"
                                         Margin="{TemplateBinding Padding}"
