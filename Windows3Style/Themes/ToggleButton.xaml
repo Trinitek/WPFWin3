@@ -17,8 +17,11 @@
                         BorderBrush="{DynamicResource ControlOutline}"
                         BorderThickness="1"
                         CornerRadius="2">
-                        <ContentControl x:Name="Panel" Style="{DynamicResource Panel3DRaised2}">
-                            <ContentControl Margin="1">
+                        <ContentControl
+                            x:Name="Panel"
+                            Focusable="False"
+                            Style="{DynamicResource Panel3DRaised2}">
+                            <ContentControl Margin="1" Focusable="False">
                                 <ContentPresenter
                                     x:Name="Presenter"
                                     Margin="{TemplateBinding Padding}"
