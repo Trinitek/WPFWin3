@@ -6,6 +6,26 @@
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FocusVisualStyle">
+            <Setter.Value>
+                <Style>
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <Rectangle
+                                    Margin="-1"
+                                    RadiusX="3"
+                                    RadiusY="3"
+                                    Stroke="{DynamicResource Foreground}"
+                                    StrokeThickness="1" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -19,23 +39,19 @@
                             RenderOptions.EdgeMode="Aliased"
                             TextBlock.Foreground="{TemplateBinding Foreground}">
 
-                            <Grid>
-                                <Border
-                                    x:Name="LightBorder"
-                                    BorderBrush="{DynamicResource ControlLight}"
-                                    BorderThickness="2,2,0,0" />
-                                <Border
-                                    x:Name="DarkBorder"
-                                    Margin="1,1,0,0"
-                                    BorderBrush="{DynamicResource ControlDark}"
-                                    BorderThickness="0,0,2,2" />
-                                <ContentPresenter
-                                    x:Name="Presenter"
-                                    Margin="2"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    RecognizesAccessKey="True" />
-                            </Grid>
+                            <ContentControl
+                                x:Name="Panel"
+                                Focusable="False"
+                                Style="{DynamicResource Panel3DRaised2}">
+                                <ContentControl Margin="1" Focusable="False">
+                                    <ContentPresenter
+                                        x:Name="Presenter"
+                                        Margin="{TemplateBinding Padding}"
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        RecognizesAccessKey="True" />
+                                </ContentControl>
+                            </ContentControl>
                         </Border>
                         <Border
                             x:Name="DefaultOutline"
@@ -51,8 +67,7 @@
                             <Setter TargetName="DefaultOutline" Property="Visibility" Value="Visible" />
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="LightBorder" Property="BorderBrush" Value="{DynamicResource ControlDark}" />
-                            <Setter TargetName="DarkBorder" Property="BorderBrush" Value="{DynamicResource ControlLight}" />
+                            <Setter TargetName="Panel" Property="Style" Value="{DynamicResource Panel3DSunken2}" />
                             <Setter TargetName="Presenter" Property="RenderTransform">
                                 <Setter.Value>
                                     <TranslateTransform X="1" Y="1" />
