@@ -46,16 +46,16 @@
             </Border>
             <Track x:Name="PART_Track" Grid.Row="1">
                 <Track.DecreaseRepeatButton>
-                    <RepeatButton Command="Slider.DecreaseLarge" Style="{StaticResource SliderButtonStyle}" />
+                    <RepeatButton Command="Slider.DecreaseLarge" Style="{DynamicResource SliderButtonStyle}" />
                 </Track.DecreaseRepeatButton>
                 <Track.Thumb>
                     <Thumb
                         x:Name="Thumb"
                         Height="22"
-                        Style="{StaticResource SliderThumb}" />
+                        Style="{DynamicResource SliderThumb}" />
                 </Track.Thumb>
                 <Track.IncreaseRepeatButton>
-                    <RepeatButton Command="Slider.IncreaseLarge" Style="{StaticResource SliderButtonStyle}" />
+                    <RepeatButton Command="Slider.IncreaseLarge" Style="{DynamicResource SliderButtonStyle}" />
                 </Track.IncreaseRepeatButton>
             </Track>
             <TickBar
@@ -70,11 +70,11 @@
         <ControlTemplate.Triggers>
             <Trigger Property="TickPlacement" Value="TopLeft">
                 <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
-                <Setter TargetName="Thumb" Property="Style" Value="{StaticResource SliderThumbUp}" />
+                <Setter TargetName="Thumb" Property="Style" Value="{DynamicResource SliderThumbUp}" />
             </Trigger>
             <Trigger Property="TickPlacement" Value="BottomRight">
                 <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
-                <Setter TargetName="Thumb" Property="Style" Value="{StaticResource SliderThumbDown}" />
+                <Setter TargetName="Thumb" Property="Style" Value="{DynamicResource SliderThumbDown}" />
             </Trigger>
             <Trigger Property="TickPlacement" Value="Both">
                 <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
@@ -113,16 +113,16 @@
             </Border>
             <Track x:Name="PART_Track" Grid.Column="1">
                 <Track.DecreaseRepeatButton>
-                    <RepeatButton Command="Slider.DecreaseLarge" Style="{StaticResource SliderButtonStyle}" />
+                    <RepeatButton Command="Slider.DecreaseLarge" Style="{DynamicResource SliderButtonStyle}" />
                 </Track.DecreaseRepeatButton>
                 <Track.Thumb>
                     <Thumb
                         x:Name="Thumb"
                         Width="22"
-                        Style="{StaticResource SliderThumb}" />
+                        Style="{DynamicResource SliderThumb}" />
                 </Track.Thumb>
                 <Track.IncreaseRepeatButton>
-                    <RepeatButton Command="Slider.IncreaseLarge" Style="{StaticResource SliderButtonStyle}" />
+                    <RepeatButton Command="Slider.IncreaseLarge" Style="{DynamicResource SliderButtonStyle}" />
                 </Track.IncreaseRepeatButton>
             </Track>
             <TickBar
@@ -137,11 +137,11 @@
         <ControlTemplate.Triggers>
             <Trigger Property="TickPlacement" Value="TopLeft">
                 <Setter TargetName="LeftTick" Property="Visibility" Value="Visible" />
-                <Setter TargetName="Thumb" Property="Style" Value="{StaticResource SliderThumbLeft}" />
+                <Setter TargetName="Thumb" Property="Style" Value="{DynamicResource SliderThumbLeft}" />
             </Trigger>
             <Trigger Property="TickPlacement" Value="BottomRight">
                 <Setter TargetName="RightTick" Property="Visibility" Value="Visible" />
-                <Setter TargetName="Thumb" Property="Style" Value="{StaticResource SliderThumbRight}" />
+                <Setter TargetName="Thumb" Property="Style" Value="{DynamicResource SliderThumbRight}" />
             </Trigger>
             <Trigger Property="TickPlacement" Value="Both">
                 <Setter TargetName="LeftTick" Property="Visibility" Value="Visible" />
@@ -157,11 +157,11 @@
         <Style.Triggers>
             <Trigger Property="Orientation" Value="Horizontal">
                 <Setter Property="MinHeight" Value="22" />
-                <Setter Property="Template" Value="{StaticResource HorizontalSlider}" />
+                <Setter Property="Template" Value="{DynamicResource HorizontalSlider}" />
             </Trigger>
             <Trigger Property="Orientation" Value="Vertical">
                 <Setter Property="MinWidth" Value="22" />
-                <Setter Property="Template" Value="{StaticResource VerticalSlider}" />
+                <Setter Property="Template" Value="{DynamicResource VerticalSlider}" />
             </Trigger>
         </Style.Triggers>
     </Style>
