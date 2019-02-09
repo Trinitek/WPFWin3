@@ -925,24 +925,54 @@
                                 <Setter Property="Padding" Value="4" />
                                 <Setter Property="Margin" Value="4" />
                             </Style>
+                            <Style BasedOn="{StaticResource TabControlBase}" TargetType="{x:Type TabControl}">
+                                <Setter Property="Margin" Value="4" />
+                            </Style>
                         </StackPanel.Resources>
                         <GroupBox Header="Top">
-                            <TabControl TabStripPlacement="Top">
-                                <TabItem Header="Tab 1">
-                                    <TextBlock>Content</TextBlock>
-                                </TabItem>
-                                <TabItem Header="Tab 2">
-                                    <TextBlock>Content</TextBlock>
-                                </TabItem>
-                                <TabItem
-                                    Background="Green"
-                                    Foreground="Yellow"
-                                    Header="Green">
-                                    <TextBlock Background="DarkCyan" Foreground="White">
-                                        Content
-                                    </TextBlock>
-                                </TabItem>
-                            </TabControl>
+                            <StackPanel Orientation="Vertical">
+                                <TabControl TabStripPlacement="Top">
+                                    <TabItem Header="Tab 1">
+                                        <TextBlock>Content</TextBlock>
+                                    </TabItem>
+                                    <TabItem Header="Tab 2">
+                                        <TextBlock>Content</TextBlock>
+                                    </TabItem>
+                                    <TabItem
+                                        Background="Green"
+                                        Foreground="Yellow"
+                                        Header="Green">
+                                        <TextBlock Background="DarkCyan" Foreground="White">
+                                            Content
+                                        </TextBlock>
+                                    </TabItem>
+                                    <TabItem
+                                        Padding="16,0"
+                                        Background="BlueViolet"
+                                        Foreground="White"
+                                        Header="Extra Padding">
+                                        <TextBlock Foreground="{DynamicResource Foreground}">Content</TextBlock>
+                                    </TabItem>
+                                </TabControl>
+                                <TabControl TabStripPlacement="Top">
+                                    <TabItem Padding="16" Header="Big Tab" />
+                                    <TabItem VerticalAlignment="Bottom" Header="Bottom">
+                                        <TextBlock>Content</TextBlock>
+                                    </TabItem>
+                                    <TabItem VerticalAlignment="Top" Header="Top">
+                                        <TextBlock>Content</TextBlock>
+                                    </TabItem>
+                                    <TabItem VerticalAlignment="Stretch" Header="Stretch">
+                                        <TextBlock>Content</TextBlock>
+                                    </TabItem>
+                                    <TabItem VerticalAlignment="Center" Header="Center">
+                                        <TextBlock>Content</TextBlock>
+                                    </TabItem>
+                                    <TabItem Header="Default">
+                                        <TextBlock>Content</TextBlock>
+                                    </TabItem>
+                                </TabControl>
+                            </StackPanel>
                         </GroupBox>
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -965,6 +995,13 @@
                                             Content
                                         </TextBlock>
                                     </TabItem>
+                                    <TabItem
+                                        Padding="0,8"
+                                        Background="BlueViolet"
+                                        Foreground="White"
+                                        Header="Extra Padding">
+                                        <TextBlock Foreground="{DynamicResource Foreground}">Content</TextBlock>
+                                    </TabItem>
                                 </TabControl>
                             </GroupBox>
                             <GroupBox Grid.Column="1" Header="Right">
@@ -982,6 +1019,13 @@
                                         <TextBlock Background="DarkCyan" Foreground="White">
                                             Content
                                         </TextBlock>
+                                    </TabItem>
+                                    <TabItem
+                                        Padding="0,8"
+                                        Background="BlueViolet"
+                                        Foreground="White"
+                                        Header="Extra Padding">
+                                        <TextBlock Foreground="{DynamicResource Foreground}">Content</TextBlock>
                                     </TabItem>
                                 </TabControl>
                             </GroupBox>
@@ -1001,6 +1045,13 @@
                                     <TextBlock Background="DarkCyan" Foreground="White">
                                         Content
                                     </TextBlock>
+                                </TabItem>
+                                <TabItem
+                                    Padding="16,0"
+                                    Background="BlueViolet"
+                                    Foreground="White"
+                                    Header="Extra Padding">
+                                    <TextBlock Foreground="{DynamicResource Foreground}">Content</TextBlock>
                                 </TabItem>
                             </TabControl>
                         </GroupBox>
