@@ -22,13 +22,13 @@
     </ResourceDictionary.MergedDictionaries>
 
     <FontFamily x:Key="DefaultFont">Microsoft Sans Serif</FontFamily>
-    <system:Double x:Key="DefaultFontSize">11</system:Double>
+    <extensions:FontSize x:Key="DefaultFontSize" Size="8pt" />
 
     <Style x:Key="WindowBase" TargetType="{x:Type Window}">
         <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
         <Setter Property="FontSize" Value="{DynamicResource DefaultFontSize}" />
         <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
-        <Setter Property="TextOptions.TextRenderingMode" Value="Aliased" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="Auto" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="RenderOptions.EdgeMode" Value="Aliased" />
