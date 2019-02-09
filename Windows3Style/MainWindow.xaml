@@ -604,7 +604,60 @@
                         </UniformGrid>
                     </StackPanel>
                 </TabItem>
-                <TabItem Header="ScrollBar" />
+                <TabItem Header="ScrollBar">
+                    <StackPanel Orientation="Vertical">
+                        <UniformGrid>
+                            <GroupBox Margin="4" Header="No Content">
+                                <ScrollViewer
+                                    Margin="4"
+                                    Background="White"
+                                    HorizontalScrollBarVisibility="Visible"
+                                    VerticalScrollBarVisibility="Visible" />
+                            </GroupBox>
+                            <GroupBox Margin="4" Header="Content">
+                                <ScrollViewer
+                                    MaxHeight="200"
+                                    Margin="4"
+                                    Background="White"
+                                    HorizontalScrollBarVisibility="Visible"
+                                    VerticalScrollBarVisibility="Visible">
+                                    <TextBlock
+                                        Width="500"
+                                        MinHeight="500"
+                                        TextWrapping="Wrap">
+                                        From the Wikipedia article &quot;Sand&quot; -- https://en.wikipedia.org/wiki/Sand<LineBreak /><LineBreak />
+                                        Sand is a granular material composed of finely divided rock and mineral particles.
+                                        It is defined by size, being finer than gravel and coarser than silt. Sand can also refer
+                                        to a textural class of soil or soil type; i.e., a soil containing more than 85 percent
+                                        sand-sized particles by mass.[1]<LineBreak /><LineBreak />
+                                        The composition of sand varies, depending on the local
+                                        rock sources and conditions, but the most common constituent of sand in inland continental
+                                        settings and non-tropical coastal settings is silica (silicon dioxide, or SiO2), usually in
+                                        the form of quartz. The second most common type of sand is calcium carbonate, for example,
+                                        aragonite, which has mostly been created, over the past half billion years, by various forms
+                                        of life, like coral and shellfish. For example, it is the primary form of sand apparent in
+                                        areas where reefs have dominated the ecosystem for millions of years like the Caribbean.<LineBreak /><LineBreak />
+                                        Sand is a non-renewable resource over human timescales, and sand suitable for making concrete
+                                        is in high demand.<LineBreak /><LineBreak />
+                                        The exact definition of sand varies. The scientific Unified Soil Classification System used in
+                                        engineering and geology corresponds to US Standard Sieves,[3] and defines sand as particles with
+                                        a diameter of between 0.074 and 4.75 millimeters. By another definition, in terms of particle
+                                        size as used by geologists, sand particles range in diameter from 0.0625 mm (or ​1⁄16 mm) to
+                                        2 mm. An individual particle in this range size is termed a sand grain. Sand grains are between
+                                        gravel (with particles ranging from 2 mm up to 64 mm by the latter system, and from 4.75 mm up
+                                        to 75 mm in the former) and silt (particles smaller than 0.0625 mm down to 0.004 mm). The size
+                                        specification between sand and gravel has remained constant for more than a century, but particle
+                                        diameters as small as 0.02 mm were considered sand under the Albert Atterberg standard in use
+                                        during the early 20th century. The grains of sand in Archimedes Sand Reckoner written around
+                                        240 BCE, were 0.02 mm in diameter. A 1953 engineering standard published by the American
+                                        Association of State Highway and Transportation Officials set the minimum sand size at 0.074
+                                        mm. A 1938 specification of the United States Department of Agriculture was 0.05 mm.[4] Sand
+                                        feels gritty when rubbed between the fingers. Silt, by comparison, feels like flour).</TextBlock>
+                                </ScrollViewer>
+                            </GroupBox>
+                        </UniformGrid>
+                    </StackPanel>
+                </TabItem>
                 <TabItem Header="Slider">
                     <StackPanel Background="Transparent" Grid.IsSharedSizeScope="True">
                         <StackPanel.Resources>

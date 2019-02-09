@@ -14,10 +14,12 @@
         <ResourceDictionary Source="Panel.xaml" />
         <ResourceDictionary Source="ProgressBar.xaml" />
         <ResourceDictionary Source="RadioButton.xaml" />
+        <ResourceDictionary Source="ScrollBar.xaml" />
         <ResourceDictionary Source="Slider.xaml" />
         <ResourceDictionary Source="TabControl.xaml" />
         <ResourceDictionary Source="TabItem.xaml" />
         <ResourceDictionary Source="TextBox.xaml" />
+        <ResourceDictionary Source="Thumb.xaml" />
         <ResourceDictionary Source="ToggleButton.xaml" />
     </ResourceDictionary.MergedDictionaries>
 

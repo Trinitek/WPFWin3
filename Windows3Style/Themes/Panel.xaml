@@ -13,7 +13,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
-                    <Grid>
+                    <Grid Background="{TemplateBinding Background}">
                         <Border BorderBrush="{DynamicResource ControlLight}" BorderThickness="1,1,0,0" />
                         <Border
                             Margin="1,1,0,0"
@@ -41,7 +41,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
-                    <Grid>
+                    <Grid Background="{TemplateBinding Background}">
                         <Border BorderBrush="{DynamicResource ControlLight}" BorderThickness="2,2,0,0" />
                         <Border
                             Margin="1,1,0,0"
@@ -69,7 +69,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
-                    <Grid>
+                    <Grid Background="{TemplateBinding Background}">
                         <Border BorderBrush="{DynamicResource ControlDark}" BorderThickness="1,1,0,0" />
                         <Border
                             Margin="1,1,0,0"
@@ -97,7 +97,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
-                    <Grid>
+                    <Grid Background="{TemplateBinding Background}">
                         <Border BorderBrush="{DynamicResource ControlDark}" BorderThickness="2,2,0,0" />
                         <Border
                             Margin="1,1,0,0"
@@ -125,7 +125,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
-                    <Grid>
+                    <Grid Background="{TemplateBinding Background}">
                         <Border BorderBrush="{DynamicResource ControlLight}" BorderThickness="1,1,0,0" />
                         <Border
                             Margin="1,1,0,0"
@@ -145,7 +145,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
-                    <Grid>
+                    <Grid Background="{TemplateBinding Background}">
                         <Border BorderBrush="{DynamicResource ControlLight}" BorderThickness="2,2,0,0" />
                         <Border
                             Margin="1,1,0,0"
@@ -165,7 +165,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
-                    <Grid>
+                    <Grid Background="{TemplateBinding Background}">
                         <Border BorderBrush="{DynamicResource ControlDark}" BorderThickness="1,1,0,0" />
                         <Border
                             Margin="1,1,0,0"
@@ -185,7 +185,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContentControl}">
-                    <Grid>
+                    <Grid Background="{TemplateBinding Background}">
                         <Border BorderBrush="{DynamicResource ControlDark}" BorderThickness="2,2,0,0" />
                         <Border
                             Margin="1,1,0,0"
