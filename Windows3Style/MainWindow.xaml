@@ -918,6 +918,94 @@
                         </StackPanel>
                     </StackPanel>
                 </TabItem>
+                <TabItem Header="TabControl">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel.Resources>
+                            <Style BasedOn="{StaticResource GroupBoxBase}" TargetType="{x:Type GroupBox}">
+                                <Setter Property="Padding" Value="4" />
+                                <Setter Property="Margin" Value="4" />
+                            </Style>
+                        </StackPanel.Resources>
+                        <GroupBox Header="Top">
+                            <TabControl TabStripPlacement="Top">
+                                <TabItem Header="Tab 1">
+                                    <TextBlock>Content</TextBlock>
+                                </TabItem>
+                                <TabItem Header="Tab 2">
+                                    <TextBlock>Content</TextBlock>
+                                </TabItem>
+                                <TabItem
+                                    Background="Green"
+                                    Foreground="Yellow"
+                                    Header="Green">
+                                    <TextBlock Background="DarkCyan" Foreground="White">
+                                        Content
+                                    </TextBlock>
+                                </TabItem>
+                            </TabControl>
+                        </GroupBox>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <GroupBox Grid.Column="0" Header="Left">
+                                <TabControl TabStripPlacement="Left">
+                                    <TabItem Header="Tab 1">
+                                        <TextBlock>Content</TextBlock>
+                                    </TabItem>
+                                    <TabItem Header="Tab 2">
+                                        <TextBlock>Content</TextBlock>
+                                    </TabItem>
+                                    <TabItem
+                                        Background="Green"
+                                        Foreground="Yellow"
+                                        Header="Green">
+                                        <TextBlock Background="DarkCyan" Foreground="White">
+                                            Content
+                                        </TextBlock>
+                                    </TabItem>
+                                </TabControl>
+                            </GroupBox>
+                            <GroupBox Grid.Column="1" Header="Right">
+                                <TabControl TabStripPlacement="Right">
+                                    <TabItem Header="Tab 1">
+                                        <TextBlock>Content</TextBlock>
+                                    </TabItem>
+                                    <TabItem Header="Tab 2">
+                                        <TextBlock>Content</TextBlock>
+                                    </TabItem>
+                                    <TabItem
+                                        Background="Green"
+                                        Foreground="Yellow"
+                                        Header="Green">
+                                        <TextBlock Background="DarkCyan" Foreground="White">
+                                            Content
+                                        </TextBlock>
+                                    </TabItem>
+                                </TabControl>
+                            </GroupBox>
+                        </Grid>
+                        <GroupBox Header="Bottom">
+                            <TabControl TabStripPlacement="Bottom">
+                                <TabItem Header="Tab 1">
+                                    <TextBlock>Content</TextBlock>
+                                </TabItem>
+                                <TabItem Header="Tab 2">
+                                    <TextBlock>Content</TextBlock>
+                                </TabItem>
+                                <TabItem
+                                    Background="Green"
+                                    Foreground="Yellow"
+                                    Header="Green">
+                                    <TextBlock Background="DarkCyan" Foreground="White">
+                                        Content
+                                    </TextBlock>
+                                </TabItem>
+                            </TabControl>
+                        </GroupBox>
+                    </StackPanel>
+                </TabItem>
             </TabControl>
         </DockPanel>
     </Grid>

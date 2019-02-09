@@ -319,7 +319,6 @@
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="FontFamily" Value="{DynamicResource MenuFont}" />
         <Setter Property="FontSize" Value="{DynamicResource MenuFontSize}" />
-        <Setter Property="FontWeight" Value="Bold" />
         <Style.Triggers>
             <Trigger Property="Role" Value="TopLevelHeader">
                 <Setter Property="Template" Value="{StaticResource {x:Static MenuItem.TopLevelHeaderTemplateKey}}" />

@@ -8,16 +8,12 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TabControl}">
-                    <Grid KeyboardNavigation.TabNavigation="Local">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
+                    <DockPanel KeyboardNavigation.TabNavigation="Local">
                         <TabPanel
-                            x:Name="HeaderPanel"
                             Grid.Row="0"
                             Panel.ZIndex="1"
                             Background="Transparent"
+                            DockPanel.Dock="{TemplateBinding TabStripPlacement}"
                             IsItemsHost="True"
                             KeyboardNavigation.TabIndex="1" />
                         <Border
@@ -44,76 +40,30 @@
                                     ContentSource="SelectedContent" />
                             </Grid>
                         </Border>
-                    </Grid>
+                    </DockPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-    </Style>
-
-    <Style TargetType="{x:Type TabItem}">
-        <Setter Property="Background" Value="{DynamicResource TabControlTabBackground}" />
-        <Setter Property="Template">
+        <Setter Property="ItemContainerStyle">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TabItem}">
-                    <Grid x:Name="Root">
-                        <Border
-                            x:Name="Border"
-                            Margin="0,0,0,0"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{DynamicResource ControlOutline}"
-                            BorderThickness="1,1,1,0"
-                            CornerRadius="3,3,0,0">
-                            <Grid>
-                                <Border
-                                    x:Name="TopBorder"
-                                    BorderBrush="{DynamicResource ControlLight}"
-                                    BorderThickness="2,2,0,0"
-                                    CornerRadius="3,3,0,0" />
-                                <Border
-                                    x:Name="BottomBorder"
-                                    BorderBrush="{DynamicResource ControlDark}"
-                                    BorderThickness="0,0,2,0" />
-                                <ContentControl Margin="12,3,12,0" Focusable="False">
-                                    <ContentPresenter
-                                        x:Name="ContentSite"
-                                        Margin="{TemplateBinding Padding}"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        ContentSource="Header"
-                                        RecognizesAccessKey="True" />
-                                </ContentControl>
-                                <Grid
-                                    x:Name="Overflow"
-                                    Margin="0,0,0,-3"
-                                    VerticalAlignment="Bottom"
-                                    Visibility="Hidden">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="2" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="2" />
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="3" />
-                                    </Grid.RowDefinitions>
-                                    <Grid Grid.Column="0" Background="{DynamicResource ControlLight}" />
-                                    <Grid Grid.Column="1" Background="{TemplateBinding Background}" />
-                                    <Grid Grid.Column="2" Background="{DynamicResource ControlDark}" />
-                                </Grid>
-                            </Grid>
-                        </Border>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter Property="Panel.ZIndex" Value="100" />
-                            <Setter TargetName="Overflow" Property="Visibility" Value="Visible" />
-                            <Setter TargetName="ContentSite" Property="RenderTransform">
-                                <Setter.Value>
-                                    <TranslateTransform Y="-1" />
-                                </Setter.Value>
-                            </Setter>
+                <Style TargetType="{x:Type TabItem}">
+                    <Setter Property="Foreground" Value="{DynamicResource Foreground}" />
+                    <Setter Property="Background" Value="{DynamicResource Control}" />
+                    <Style.Triggers>
+                        <Trigger Property="TabStripPlacement" Value="Top">
+                            <Setter Property="Template" Value="{DynamicResource TopTabItemTemplate}" />
                         </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
+                        <Trigger Property="TabStripPlacement" Value="Bottom">
+                            <Setter Property="Template" Value="{DynamicResource BottomTabItemTemplate}" />
+                        </Trigger>
+                        <Trigger Property="TabStripPlacement" Value="Left">
+                            <Setter Property="Template" Value="{DynamicResource LeftTabItemTemplate}" />
+                        </Trigger>
+                        <Trigger Property="TabStripPlacement" Value="Right">
+                            <Setter Property="Template" Value="{DynamicResource RightTabItemTemplate}" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
             </Setter.Value>
         </Setter>
     </Style>

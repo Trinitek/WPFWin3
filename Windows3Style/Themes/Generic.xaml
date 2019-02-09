@@ -16,6 +16,7 @@
         <ResourceDictionary Source="RadioButton.xaml" />
         <ResourceDictionary Source="Slider.xaml" />
         <ResourceDictionary Source="TabControl.xaml" />
+        <ResourceDictionary Source="TabItem.xaml" />
         <ResourceDictionary Source="TextBox.xaml" />
         <ResourceDictionary Source="ToggleButton.xaml" />
     </ResourceDictionary.MergedDictionaries>
