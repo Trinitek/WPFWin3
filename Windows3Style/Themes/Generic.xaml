@@ -23,6 +23,18 @@
     <FontFamily x:Key="DefaultFont">Microsoft Sans Serif</FontFamily>
     <system:Double x:Key="DefaultFontSize">11</system:Double>
 
+    <Style x:Key="WindowBase" TargetType="{x:Type Window}">
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
+        <Setter Property="FontSize" Value="{DynamicResource DefaultFontSize}" />
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+        <Setter Property="TextOptions.TextRenderingMode" Value="Aliased" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="RenderOptions.EdgeMode" Value="Aliased" />
+    </Style>
+
+    <Style BasedOn="{StaticResource WindowBase}" TargetType="{x:Type Window}" />
+
     <PathGeometry x:Key="UpArrowData" Figures="M 6 0 L 12 6 L 0 6 Z" />
     <PathGeometry x:Key="DownArrowData" Figures="M 0 0 L 6 6 L 12 0 Z" />
     <PathGeometry x:Key="RightArrowData" Figures="M 0 0 L 6 6 L 0 12 Z" />

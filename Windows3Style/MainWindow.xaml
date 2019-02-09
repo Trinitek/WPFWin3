@@ -9,15 +9,8 @@
     Title="MainWindow"
     Width="600"
     Background="White"
-    FontFamily="{DynamicResource DefaultFont}"
-    FontSize="{DynamicResource DefaultFontSize}"
-    FontWeight="Bold"
-    RenderOptions.EdgeMode="Aliased"
     SizeToContent="Height"
-    SnapsToDevicePixels="True"
-    TextOptions.TextFormattingMode="Display"
-    TextOptions.TextRenderingMode="Aliased"
-    UseLayoutRounding="True"
+    Style="{DynamicResource WindowBase}"
     mc:Ignorable="d">
     <Grid>
         <DockPanel>
