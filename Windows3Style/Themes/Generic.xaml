@@ -23,8 +23,8 @@
         <ResourceDictionary Source="ToggleButton.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <FontFamily x:Key="DefaultFont">Microsoft Sans Serif</FontFamily>
-    <extensions:FontSize x:Key="DefaultFontSize" Size="8pt" />
+    <FontFamily x:Key="DefaultFont">Fonts/#SystemTrue</FontFamily>
+    <extensions:FontSize x:Key="DefaultFontSize" Size="12pt" />
 
     <Style x:Key="WindowBase" TargetType="{x:Type Window}">
         <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}" />
@@ -67,8 +67,8 @@
     <SolidColorBrush x:Key="TextBoxBackground" Color="White" />
 
     <SolidColorBrush x:Key="MenuBackground" Color="White" />
-    <FontFamily x:Key="MenuFont">Microsoft Sans Serif</FontFamily>
-    <system:Double x:Key="MenuFontSize">14</system:Double>
+    <FontFamily x:Key="MenuFont">Fonts/#SystemTrue</FontFamily>
+    <extensions:FontSize x:Key="MenuFontSize" Size="12pt" />
 
     <SolidColorBrush x:Key="ProgressBarBackground" Color="White" />
     <SolidColorBrush x:Key="ProgressBarIndicatorFill" Color="Blue" />

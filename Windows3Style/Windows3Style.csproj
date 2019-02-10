@@ -156,6 +156,8 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Themes\Fonts\SystemTrue.json" />
+    <Resource Include="Themes\Fonts\SystemTrue.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
