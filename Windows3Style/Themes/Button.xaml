@@ -8,6 +8,7 @@
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{DynamicResource Foreground}" />
         <Setter Property="FocusVisualStyle">
             <Setter.Value>
                 <Style>
@@ -76,7 +77,7 @@
                             <Setter TargetName="Presenter" Property="RenderTransformOrigin" Value="1,1" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter TargetName="Border" Property="TextBlock.Foreground" Value="{DynamicResource ForegroundDisabled}" />
+                            <Setter Property="Foreground" Value="{DynamicResource ForegroundDisabled}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
