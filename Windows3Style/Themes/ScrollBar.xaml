@@ -8,6 +8,8 @@
         <Setter Property="Focusable" Value="False" />
         <Setter Property="Background" Value="{DynamicResource Control}" />
         <Setter Property="BorderBrush" Value="{DynamicResource ControlOutline}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
@@ -147,6 +149,8 @@
     <Style x:Key="ScrollBarBase" TargetType="{x:Type ScrollBar}">
         <Setter Property="BorderBrush" Value="{DynamicResource ControlOutline}" />
         <Setter Property="Background" Value="{DynamicResource ControlDark}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
         <Style.Triggers>
             <Trigger Property="Orientation" Value="Vertical">
                 <Setter Property="Width" Value="18" />
