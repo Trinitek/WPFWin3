@@ -39,6 +39,13 @@
             </PathGeometry.Transform>
         </PathGeometry>
     </GeometryGroup>
+    <GeometryGroup x:Key="CrossData">
+        <!--
+        <LineGeometry StartPoint="-1,-1" EndPoint="17,17" />
+        <LineGeometry StartPoint="-1,17" EndPoint="17,-1" />
+        -->
+        <PathGeometry Figures="M 2 0 L 8 6 L 14 0 L 16 2 L 10 8 L 16 14 L 14 16 L 8 10 L 2 16 L 0 14 L 6 8 L 0 2 Z" />
+    </GeometryGroup>
 
     <SolidColorBrush x:Key="ControlLight" Color="White" />
     <SolidColorBrush x:Key="Control" Color="LightGray" />

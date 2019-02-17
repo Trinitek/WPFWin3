@@ -1,7 +1,8 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:Windows3Style.Themes">
+    xmlns:local="clr-namespace:Windows3Style.Themes"
+    xmlns:root="clr-namespace:Windows3Style">
     <ControlTemplate x:Key="Win3Window" TargetType="{x:Type Window}">
         <Border>
             <Border.Style>
@@ -30,28 +31,65 @@
                         <Border
                             x:Name="CaptionBar"
                             Grid.ColumnSpan="3"
-                            Background="Blue" />
-                        <Button
+                            Background="Blue">
+                            <TextBlock
+                                x:Name="CaptionText"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Center"
+                                FontSize="12pt"
+                                Foreground="White"
+                                Text="{Binding Path=Title, RelativeSource={RelativeSource TemplatedParent}}"
+                                TextAlignment="Center" />
+                        </Border>
+                        <Border
                             Grid.Column="0"
-                            Width="24"
-                            Command="{x:Static SystemCommands.ShowSystemMenuCommand}"
-                            CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
-                            WindowChrome.IsHitTestVisibleInChrome="True">
-                            <Path Data="{DynamicResource RightArrowData}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}, Mode=FindAncestor}}" />
-                            <!--
-                            <TextBlock Foreground="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}, Mode=FindAncestor}}">Idk</TextBlock>
-                            Idk
-                            -->
-                        </Button>
-                        <TextBlock
-                            x:Name="CaptionText"
-                            Grid.Column="1"
-                            HorizontalAlignment="Stretch"
-                            VerticalAlignment="Center"
-                            FontSize="12pt"
-                            Foreground="White"
-                            Text="{Binding Path=Title, RelativeSource={RelativeSource TemplatedParent}}"
-                            TextAlignment="Center" />
+                            BorderBrush="{DynamicResource ControlOutline}"
+                            BorderThickness="1">
+                            <Button
+                                Width="24"
+                                Margin="-1"
+                                Command="{x:Static SystemCommands.ShowSystemMenuCommand}"
+                                CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+                                WindowChrome.IsHitTestVisibleInChrome="True">
+                                <Button.InputBindings>
+                                    <MouseBinding
+                                        Command="{x:Static SystemCommands.CloseWindowCommand}"
+                                        CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+                                        Gesture="LeftDoubleClick" />
+                                </Button.InputBindings>
+                                <Viewbox Width="16" Height="16">
+                                    <Image Source="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}, Path=Icon}" />
+                                </Viewbox>
+                            </Button>
+                        </Border>
+                        <Border
+                            Grid.Column="2"
+                            BorderBrush="{DynamicResource ControlOutline}"
+                            BorderThickness="1">
+                            <StackPanel Margin="-1" Orientation="Horizontal">
+                                <Button
+                                    Width="24"
+                                    Command="{x:Static SystemCommands.MinimizeWindowCommand}"
+                                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+                                    WindowChrome.IsHitTestVisibleInChrome="True">
+                                    <Path Data="{DynamicResource DownArrowData}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}, Mode=FindAncestor}}" />
+                                </Button>
+                                <Button
+                                    Width="24"
+                                    Command="{x:Static SystemCommands.MaximizeWindowCommand}"
+                                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+                                    WindowChrome.IsHitTestVisibleInChrome="True">
+                                    <Path Data="{DynamicResource UpDownArrowData}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}, Mode=FindAncestor}}" />
+                                </Button>
+                                <Button
+                                    Width="24"
+                                    Command="{x:Static SystemCommands.CloseWindowCommand}"
+                                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+                                    WindowChrome.IsHitTestVisibleInChrome="True">
+                                    <Path Data="{DynamicResource CrossData}" Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}, Mode=FindAncestor}}" />
+                                </Button>
+                            </StackPanel>
+                        </Border>
                     </Grid>
                     <!--  Window Content  -->
                     <Border Grid.Row="1" Background="White">
@@ -76,6 +114,11 @@
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="RenderOptions.EdgeMode" Value="Aliased" />
+    </Style>
+    <Style
+        x:Key="RetroWindowBase"
+        BasedOn="{StaticResource WindowBase}"
+        TargetType="{x:Type root:RetroWindow}">
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
                 <WindowChrome

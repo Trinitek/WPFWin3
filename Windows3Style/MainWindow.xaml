@@ -1,4 +1,4 @@
-﻿<Window
+﻿<local:RetroWindow
     x:Class="Windows3Style.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -10,7 +10,7 @@
     Width="600"
     Background="White"
     SizeToContent="Height"
-    Style="{DynamicResource WindowBase}"
+    Style="{DynamicResource RetroWindowBase}"
     mc:Ignorable="d">
     <Grid>
         <DockPanel>
@@ -1113,4 +1113,4 @@
             </TabControl>
         </DockPanel>
     </Grid>
-</Window>
+</local:RetroWindow>
